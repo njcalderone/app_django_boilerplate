@@ -1,0 +1,13 @@
+{% load static %}
+{% load socialaccount %}
+{% block html_not_auth %}
+<img src="{% static 'img/nice-try-on-d39cf52d4f.jpeg' %}" alt="Nice-Try" style="width:600px">
+<p>Please follow the link below and actually login:</p>
+<a href="{% provider_login_url 'keycloak' %}">login/Sign Up</a>
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+{% load static %}
+{% include 'snippet/sidebar.html' %}
+<div style="width:100%;position:absolute;height:10%; top:0; left:0;background-color: #000000">
+    <h1 style="position:absolute;left:10%;width:95%;height:8%;text-align: center;float:inside;font-size: 160%;color: white;text-overflow: ellipsis;">Your App Name</h1>
+    <img src='{% static "img/GAP_Icon.gif" %}' alt="icon" style="position: absolute ;left:0%; Top:0%;height:100%;margin: auto;" id="home" >
+    <div Style="position: absolute ;left:.5%; Top:15%;text-align: center;color: white;" >
+        <pre>
+<b style="color: red">G</b>lobal
+<b style="color: red">A</b>nalytics
+<b style="color: red">P</b>latform
+        </pre>
+    </div>
+    {% include 'snippet/logout.html' %}
+</div>
+

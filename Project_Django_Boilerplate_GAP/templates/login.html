@@ -1,0 +1,26 @@
+<!-- templates/login.html -->
+
+{% load socialaccount %}
+
+
+<h1>Welcome to external page</h1>
+{% if user.is_authenticated %}
+<p>Welcome {{ user.username }} !!!</p>
+
+
+<!--fix static link to use env variables-->
+<a href="{{ base_url }}accounts/profile/">return to internal page</a>
+{% block content %}
+
+<form method="post" action="{% url 'account_logout' %}">
+    {% csrf_token %}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+    {% endif %}
+    <button type="submit">Sign Out</button>
+</form>
+
+{% endblock %}
+{% else %}
+<meta http-equiv="Refresh" content="0; url='/accounts/keycloak/login/?process=login'" />
+{% endif %}

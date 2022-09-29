@@ -1,0 +1,9 @@
+{% load static %}
+<form style="position:absolute; top:0; right:0;" method="post" action="{% url 'account_logout' %}">
+    {% csrf_token %}
+    <script>document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";</script>
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+    {% endif %}
+    <button class="logout" type="submit">Sign Out</button>
+</form>

@@ -1,0 +1,28 @@
+<!-- templates/login.html -->
+{% load socialaccount %}
+{% load Project_Django_Boilerplate_Gap_Extras %}
+{% load static %}
+{% load i18n %}
+{% if user.is_authenticated %}
+{% include 'snippet/web_banner.html' %}
+{% include 'snippet/head.html' %}
+<link rel="stylesheet" href="{% static 'css/boilerplate.css' %}">
+<div style="width:85%;position:absolute;height:100%; top:10%; left:15%;background-color: white">
+<body>
+
+<h1 style="color:black;text-align: center;font-size: 110%" >Hello <u>{{ user.username }}</u> welcome to your first GAP app</h1>
+<p style="margin: 5%;color:black;text-align: justify;font-size: 100%; text-indent:40px">This is the area that people will first read to understand you app.
+    Please do your best to briefly describe the intent and purpose of your application. Random_text to fill out paragraph more: tttttttttttttrgrfbapfiuhepfi
+    uhewui EUH EWIDIU GHWpduhwpdhvdfkewhbdp wqihepw q uhd pwhd pwqDHPwqd8 qwphy8w hdiwh d 8 8d8hp dw8 9dpqw 8wew8y yey8 dqwe 8wqe8 yppwdqwp8 dhDH HDIH
+</p>
+<p style="margin: 5%;color:black;text-align: justify;font-size: 100%; text-indent:40px"> Use the side links to navigate between your sub apps that you create.
+    Use the top panel to link out to other GAP internal applications. Random_text to fill out paragraph more: tttttttttttttrgrfbapfiuhepfiuhewui EUH EWIDIU GHW
+    pduhwpdhvdfkewhbdp wqihepw q uhd pwhd pwqDHPwqd8 qwphy8w hdiwh d 8 8d8hp d
+</p>
+</body>
+</div>
+{% block content %}
+{% endblock %}
+{% else %}
+{% include 'snippet/not_authorized.html' %}
+{% endif %}

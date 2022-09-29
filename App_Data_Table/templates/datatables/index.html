@@ -1,0 +1,81 @@
+{% extends 'datatables/base.html' %}
+{% load socialaccount %}
+{% load static %}
+{% load i18n %}
+{% include 'snippet/head.html' %}
+{% if user.is_authenticated %}
+{% block body %}
+{% include 'snippet/web_banner.html' %}
+<div style="width:80%;position:absolute;margin:2%;padding: 0;height:100%; top:10%;left:15%;right:2%;background-color: white">
+    <body>
+    <h1 style="text-align: center">Name of your table</h1>
+        <p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addnewmember" style="width:300px;">
+                Add New
+            </button>
+        </p>
+        <!-- Modal -->
+        <div class="modal fade" id="addnewmember" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add New</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label>Firstname</label>
+                                <input type="text" id="firstname" class="form-control"/>
+                            </div>
+                            <div class="mb-3">
+                                <label>Lastname</label>
+                                <input type="text" id="lastname" class="form-control"/>
+                            </div>
+                            <div class="mb-3">
+                                <label>Address</label>
+                                <input type="text" id="address" class="form-control"/>
+                            </div>
+                            <div class="mb-3">
+                                <label>Phone</label>
+                                <input type="text" id="phone" class="form-control"/>
+                            </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="submit">Submit</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <hr style="border-top:1px solid #000; clear:both;"/>
+        <table id = "table" class = "table table-bordered">
+            <thead class="alert-warning">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Address</th>
+                <th>phone</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for member in all_members %}
+                <tr>
+                    <td>{{ member.firstname }}</td>
+                    <td>{{ member.lastname }}</td>
+                    <td>{{ member.address  }}</td>
+                    <td>{{ member.phone  }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</div>
+{% endblock %}
+{% else %}
+{% include 'snippet/not_authorized.html' %}
+{% endif %}
