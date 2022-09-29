@@ -5,7 +5,6 @@ cachy==0.3.0
 certifi==2022.9.24
 cffi==1.15.1
 charset-normalizer==2.1.1
-cleo==1.0.0a5
 crashtest==0.3.1
 cryptography==38.0.1
 defusedxml==0.7.1
@@ -13,7 +12,6 @@ distlib==0.3.6
 dj-rest-auth==2.2.5
 Django==4.1.1
 django-allauth==0.51.0
--e git+ssh://git@github.com/njcalderone/Django_Biolerplate_GAP.git@b2b82802445af2ae3db41c749af9526a102b3d0a#egg=django_boilerplate_gap
 django-environ==0.9.0
 django-extensions==3.2.1
 django-sslserver==0.22
@@ -23,7 +21,6 @@ dulwich==0.20.46
 ecdsa==0.18.0
 filelock==3.8.0
 html5lib==1.1
-idna==3.4
 jaraco.classes==3.2.3
 jsonschema==4.16.0
 keyring==23.9.3
