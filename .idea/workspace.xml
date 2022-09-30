@@ -2,12 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89e7f679-bc6c-4258-a31d-a2979887af04" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/Hamburger_Dropdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/gap-seal-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/gap-seal-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/jsoc-seal-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/logout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/logout.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/logoutsmall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/nice-try-on-d39cf52d4f.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output-3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output-4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output-6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output-onlinegiftools.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_classification_banner_U_bottom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_classification_banner_U_top.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App_Data_Table/templates/datatables/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/App_Data_Table/templates/datatables/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/API_Talk.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/API_Talk.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/boilerplate.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/boilerplate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/sidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/FAGM.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_banner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,15 +58,23 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/CyberSlayer/Documents/django_boilerplate/Project_Django_Boilerplate_GAP/templates/snippet",
+    "list.type.of.created.stylesheet": "CSS",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -49,6 +89,9 @@
       <workItem from="1664477671082" duration="115000" />
       <workItem from="1664477920273" duration="1401000" />
       <workItem from="1664479346863" duration="3263000" />
+      <workItem from="1664486828935" duration="420000" />
+      <workItem from="1664546493526" duration="9118000" />
+      <workItem from="1664565737701" duration="7417000" />
     </task>
     <servers />
   </component>

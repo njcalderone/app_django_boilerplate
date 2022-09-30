@@ -6,7 +6,7 @@
 {% if user.is_authenticated %}
 {% block body %}
 {% include 'snippet/web_banner.html' %}
-<div style="width:80%;position:absolute;margin:2%;padding: 0;height:100%; top:10%;left:15%;right:2%;background-color: white">
+<div style="width:80%;position:absolute;top:12%;bottom:12%;left:12%;right:2%;background-color: white">
     <body>
     <h1 style="text-align: center">Name of your table</h1>
         <p>
@@ -75,6 +75,7 @@
         </table>
     </body>
 </div>
+{% include 'snippet/web_footer.html' %}
 {% endblock %}
 {% else %}
 {% include 'snippet/not_authorized.html' %}

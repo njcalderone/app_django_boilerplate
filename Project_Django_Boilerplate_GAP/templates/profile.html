@@ -4,10 +4,10 @@
 {% load static %}
 {% load i18n %}
 {% if user.is_authenticated %}
-{% include 'snippet/web_banner.html' %}
 {% include 'snippet/head.html' %}
-<link rel="stylesheet" href="{% static 'css/boilerplate.css' %}">
-<div style="width:85%;position:absolute;height:100%; top:10%; left:15%;background-color: white">
+{% include 'snippet/web_banner.html' %}
+{% include 'snippet/web_footer.html' %}
+<div style="position:absolute;top:12%;bottom:12%;left:12%;background-color: white">
 <body>
 
 <h1 style="color:black;text-align: center;font-size: 110%" >Hello <u>{{ user.username }}</u> welcome to your first GAP app</h1>
@@ -21,6 +21,7 @@
 </p>
 </body>
 </div>
+
 {% block content %}
 {% endblock %}
 {% else %}

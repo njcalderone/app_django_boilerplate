@@ -1,15 +1,26 @@
 {% load static %}
-{% include 'snippet/sidebar.html' %}
-<div style="width:100%;position:absolute;height:10%; top:0; left:0;background-color: #000000">
-    <h1 style="position:absolute;left:10%;width:95%;height:8%;text-align: center;float:inside;font-size: 160%;color: white;text-overflow: ellipsis;">Your App Name</h1>
-    <img src='{% static "img/GAP_Icon.gif" %}' alt="icon" style="position: absolute ;left:0%; Top:0%;height:100%;margin: auto;" id="home" >
-    <div Style="position: absolute ;left:.5%; Top:15%;text-align: center;color: white;" >
-        <pre>
-<b style="color: red">G</b>lobal
-<b style="color: red">A</b>nalytics
-<b style="color: red">P</b>latform
-        </pre>
+{% include 'snippet/web_classification_banner_U_top.html' %}
+<link rel="stylesheet" href="{% static 'css/Hamburger_Dropdown.css' %}">
+<link rel="stylesheet" href="{% static 'css/boilerplate.css' %}">
+<div style="width:100%;position:absolute;height:10%; top:2%; left:0;background-color: #2E314E">
+    <section style="position:absolute;top:0; left:0;%" class="p-menu1">
+        <nav id="navbar" class="navigation" role="navigation">
+            <input id="toggle1" type="checkbox" />
+            <label class="hamburger1" for="toggle1">
+                <div class="top"></div>
+                <div class="meat"></div>
+                <div class="bottom"></div>
+            </label>
+            <nav class="menu1">
+                <a class="link1" target="_self" href='/accounts/profile/'>Home</a>
+                <a class="link1" target="_self" href='/datatables/index.html'>Data Input</a>
+            </nav>
+        </nav>
+    </section>
+    <div>
+        <img src='{% static "img/gap-seal-2.svg" %}' alt="icon" style="position: absolute ;left:5%; Top:5%;height:90%;margin: auto;" id="home" >
     </div>
+    <h1 style="position:absolute;Top:25%;left:12%;width:95%;height:8%;text-align: justify;float:inside;font-size:160%;color: white;text-overflow: ellipsis;">Your App Name</h1>
     {% include 'snippet/logout.html' %}
 </div>
 
