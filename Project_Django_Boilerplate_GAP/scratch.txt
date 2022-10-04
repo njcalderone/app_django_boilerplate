@@ -1,0 +1,20 @@
+# get id
+
+headers1 = {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer' + access_token,
+}
+
+response = requests.get(Base_URL + 'auth/admin/realms/default/users?username=' + user_name + '&exact=true',
+
+                        headers=headers1)
+
+user_id=""
+#get user role
+
+headers2 = {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer',
+}
+
+response = requests.get('http://localhost:8080/auth/admin/realms/default/users/'+user_id+'/role-mappings', headers=headers2)

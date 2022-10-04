@@ -7,10 +7,11 @@
 {% include 'snippet/head.html' %}
 {% include 'snippet/web_banner.html' %}
 {% include 'snippet/web_footer.html' %}
+{% block content %}
 <div style="position:absolute;top:12%;bottom:12%;left:12%;background-color: white">
 <body>
 
-<h1 style="color:black;text-align: center;font-size: 110%" >Hello <u>{{ user.username }}</u> welcome to your first GAP app</h1>
+<h1 style="color:black;text-align: center;font-size: 110%" >Hello <u>{{ user.user_username }}</u> welcome to your first GAP app</h1>
 <p style="margin: 5%;color:black;text-align: justify;font-size: 100%; text-indent:40px">This is the area that people will first read to understand you app.
     Please do your best to briefly describe the intent and purpose of your application. Random_text to fill out paragraph more: tttttttttttttrgrfbapfiuhepfi
     uhewui EUH EWIDIU GHWpduhwpdhvdfkewhbdp wqihepw q uhd pwhd pwqDHPwqd8 qwphy8w hdiwh d 8 8d8hp dw8 9dpqw 8wew8y yey8 dqwe 8wqe8 yppwdqwp8 dhDH HDIH
@@ -19,11 +20,14 @@
     Use the top panel to link out to other GAP internal applications. Random_text to fill out paragraph more: tttttttttttttrgrfbapfiuhepfiuhewui EUH EWIDIU GHW
     pduhwpdhvdfkewhbdp wqihepw q uhd pwhd pwqDHPwqd8 qwphy8w hdiwh d 8 8d8hp d
 </p>
-</body>
-</div>
 
-{% block content %}
-{% endblock %}
+<p>{{ login_name }}</p>
+<p>{{ login_roles }}</p>
+
+</body>
+
+</div>
+{% endblock content %}
 {% else %}
 {% include 'snippet/not_authorized.html' %}
 {% endif %}

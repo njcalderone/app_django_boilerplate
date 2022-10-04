@@ -1,0 +1,280 @@
+Index: env_example
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/env_example b/env_example
+new file mode 100644
+--- /dev/null	(date 1664574162380)
++++ b/env_example	(date 1664574162380)
+@@ -0,0 +1,11 @@
++DJANGO_SETTINGS_MODULE=Project_Django_Boilerplate_GAP.settings
++DJANGO_ADMIN_USER=admin
++DJANGO_ADMIN_EMAIL=admin@info.com
++DJANGO_ADMIN_PASS=admin
++KEYCLOAK_ACCESS_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjY2UxZjE5Mi02ZDY5LTQzYzAtYTk2My1iYzU3MmZjZjVlMjAifQ.eyJleHAiOjAsImlhdCI6MTY2NDMwNjM3NywianRpIjoiNmU1OTg2YjItOGYwZi00MGM3LTgwNmYtM2MzZDRjZjExYWEyIiwiaXNzIjoiaHR0cDovL2hvc3QuZG9ja2VyLmludGVybmFsOjgwODAvYXV0aC9yZWFsbXMvZGVmYXVsdCIsImF1ZCI6Imh0dHA6Ly9ob3N0LmRvY2tlci5pbnRlcm5hbDo4MDgwL2F1dGgvcmVhbG1zL2RlZmF1bHQiLCJ0eXAiOiJSZWdpc3RyYXRpb25BY2Nlc3NUb2tlbiIsInJlZ2lzdHJhdGlvbl9hdXRoIjoiYXV0aGVudGljYXRlZCJ9.iRvP_Wb4hra6HIn7XpLJfEOZ8YqO9CTpRWtLHIOAQQo
++KEYCLOAK_CLIENT_ID=notTheDjangoApp
++KEYCLOAK_CLIENT_SECRET=4ph4iZ83f4YpBALCNFkndL9UbiPEVGcf
++SITE_BASE_URL=http://127.0.0.1:8000/
++KEYCLOAK_URL=http://127.0.0.1:8080/
++REALM_NAME=default
++ENCODED_REDIRECT_URI=http%3A%2F%2Flocalhost%3A8080%2F%0A
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"89e7f679-bc6c-4258-a31d-a2979887af04\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/Hamburger_Dropdown.css\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/gap-seal-1.svg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/gap-seal-2.svg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/jsoc-seal-1.svg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/logout.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/logout.svg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/logoutsmall.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/nice-try-on-d39cf52d4f.jpeg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output-3.gif\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output-4.gif\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output-6.gif\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output-onlinegiftools.gif\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output2.gif\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_classification_banner_U_bottom.html\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_classification_banner_U_top.html\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_footer.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/App_Data_Table/templates/datatables/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/App_Data_Table/templates/datatables/index.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/API_Talk.sh\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/API_Talk.sh\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/boilerplate.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/boilerplate.css\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/sidebar.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/sidebar.css\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/FAGM.gif\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/profile.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/profile.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/logout.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/logout.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_banner.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_banner.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/db.sqlite3\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/db.sqlite3\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"CSS File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2FSFdgEPDxjeI3CvHYl74QSAYSF\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"last_opened_file_path\": \"/Users/CyberSlayer/Documents/django_boilerplate/Project_Django_Boilerplate_GAP/templates/snippet\",\n    \"list.type.of.created.stylesheet\": \"CSS\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"project.structure.last.edited\": \"SDKs\",\n    \"project.structure.proportion\": \"0.0\",\n    \"project.structure.side.proportion\": \"0.2\",\n    \"run.code.analysis.last.selected.profile\": \"pProject Default\",\n    \"settings.editor.selected.configurable\": \"preferences.pluginManager\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet\" />\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img\" />\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"89e7f679-bc6c-4258-a31d-a2979887af04\" name=\"Changes\" comment=\"\" />\n      <created>1664477667685</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1664477667685</updated>\n      <workItem from=\"1664477671082\" duration=\"115000\" />\n      <workItem from=\"1664477920273\" duration=\"1401000\" />\n      <workItem from=\"1664479346863\" duration=\"3263000\" />\n      <workItem from=\"1664486828935\" duration=\"420000\" />\n      <workItem from=\"1664546493526\" duration=\"9118000\" />\n      <workItem from=\"1664565737701\" duration=\"7417000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 46ece178e8c9a361b1f6e68f487441d1aa13d225)
++++ b/.idea/workspace.xml	(date 1664574225819)
+@@ -2,32 +2,10 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="89e7f679-bc6c-4258-a31d-a2979887af04" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/Hamburger_Dropdown.css" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/gap-seal-1.svg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/gap-seal-2.svg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/jsoc-seal-1.svg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/logout.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/logout.svg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/logoutsmall.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/nice-try-on-d39cf52d4f.jpeg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output-3.gif" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output-4.gif" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output-6.gif" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output-onlinegiftools.gif" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/output2.gif" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_classification_banner_U_bottom.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_classification_banner_U_top.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_footer.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/App_Data_Table/templates/datatables/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/App_Data_Table/templates/datatables/index.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/API_Talk.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/API_Talk.sh" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/boilerplate.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/boilerplate.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/css/sidebar.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/static/img/FAGM.gif" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/profile.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/logout.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/templates/snippet/web_banner.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/env_example" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -91,7 +69,7 @@
+       <workItem from="1664479346863" duration="3263000" />
+       <workItem from="1664486828935" duration="420000" />
+       <workItem from="1664546493526" duration="9118000" />
+-      <workItem from="1664565737701" duration="7417000" />
++      <workItem from="1664565737701" duration="7769000" />
+     </task>
+     <servers />
+   </component>
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(date 1664574162379)
++++ b/.gitignore	(date 1664574162379)
+@@ -0,0 +1,164 @@
++# https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
++
++# Byte-compiled / optimized / DLL files
++__pycache__/
++*.py[cod]
++*$py.class
++
++# C extensions
++*.so
++
++# Distribution / packaging
++.Python
++build/
++develop-eggs/
++dist/
++downloads/
++eggs/
++.eggs/
++lib/
++lib64/
++parts/
++sdist/
++var/
++wheels/
++share/python-wheels/
++*.egg-info/
++.installed.cfg
++*.egg
++MANIFEST
++
++# PyInstaller
++#  Usually these files are written by a python script from a template
++#  before PyInstaller builds the exe, so as to inject date/other infos into it.
++*.manifest
++*.spec
++
++# Installer logs
++pip-log.txt
++pip-delete-this-directory.txt
++
++# Unit test / coverage reports
++htmlcov/
++.tox/
++.nox/
++.coverage
++.coverage.*
++.cache
++nosetests.xml
++coverage.xml
++*.cover
++*.py,cover
++.hypothesis/
++.pytest_cache/
++cover/
++
++# Translations
++*.mo
++*.pot
++
++# Django stuff:
++*.log
++local_settings.py
++db.sqlite3
++db.sqlite3-journal
++
++# Flask stuff:
++instance/
++.webassets-cache
++
++# Scrapy stuff:
++.scrapy
++
++# Sphinx documentation
++docs/_build/
++
++# PyBuilder
++.pybuilder/
++target/
++
++# Jupyter Notebook
++.ipynb_checkpoints
++
++# IPython
++profile_default/
++ipython_config.py
++
++# pyenv
++#   For a library or package, you might want to ignore these files since the code is
++#   intended to run in multiple environments; otherwise, check them in:
++# .python-version
++
++# pipenv
++#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
++#   However, in case of collaboration, if having platform-specific dependencies or dependencies
++#   having no cross-platform support, pipenv may install dependencies that don't work, or not
++#   install all needed dependencies.
++#Pipfile.lock
++
++# poetry
++#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
++#   This is especially recommended for binary packages to ensure reproducibility, and is more
++#   commonly ignored for libraries.
++#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
++#poetry.lock
++
++# pdm
++#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
++#pdm.lock
++#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
++#   in version control.
++#   https://pdm.fming.dev/#use-with-ide
++.pdm.toml
++
++# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
++__pypackages__/
++
++# Celery stuff
++celerybeat-schedule
++celerybeat.pid
++
++# SageMath parsed files
++*.sage.py
++
++# Environments
++.env
++.venv
++env/
++venv/
++ENV/
++env.bak/
++venv.bak/
++
++# Spyder project settings
++.spyderproject
++.spyproject
++
++# Rope project settings
++.ropeproject
++
++# mkdocs documentation
++/site
++
++# mypy
++.mypy_cache/
++.dmypy.json
++dmypy.json
++
++# Pyre type checker
++.pyre/
++
++# pytype static type analyzer
++.pytype/
++
++# Cython debug symbols
++cython_debug/
++
++# PyCharm
++#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
++#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
++#  and can be added to the global gitignore or merged into this file.  For a more nuclear
++#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
++#.idea/
++
++.DS_Store
+\ No newline at end of file
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Django_Biolerplate_GAP\nusfull Links\n  Keycloak Auth: https://number1.co.za/using-keycloak-as-the-identity-provider-for-users-on-django-and-django-admin/\n                 https://django-keycloak.readthedocs.io/en/latest/scenario/initial_setup.html\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision 46ece178e8c9a361b1f6e68f487441d1aa13d225)
++++ b/README.md	(date 1664574162380)
+@@ -1,4 +1,12 @@
+-# Django_Biolerplate_GAP
+-usfull Links
++# GAP Django Boilerplate
++Useful Links
+   Keycloak Auth: https://number1.co.za/using-keycloak-as-the-identity-provider-for-users-on-django-and-django-admin/
+                  https://django-keycloak.readthedocs.io/en/latest/scenario/initial_setup.html
++
++
++## Usage
++1. Run your own KC, use the one in the old legacy boilerplate
++2. Edit `.env`, use our `.env_example` with the provided KC
++3. Set up pyenv and poetry
++4. `poetry shell`
++5. Run `python manage.py runserver`.config
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
