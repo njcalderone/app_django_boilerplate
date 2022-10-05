@@ -1,11 +1,9 @@
 import os
 import django
-from django.http import request
+import Project_Django_Boilerplate_GAP.views
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Project_Django_Boilerplate_GAP.settings')
 django.setup()
-from allauth.socialaccount.models import SocialAccount, SocialApp, SocialLogin
-from allauth.socialaccount.helpers import socialaccount_user_display
 
 from App_Data_Table.models import Member
 from django.shortcuts import render, redirect
@@ -35,5 +33,3 @@ def insert(request):
 
 
 from django.shortcuts import render
-
-

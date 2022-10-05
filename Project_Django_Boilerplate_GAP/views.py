@@ -16,19 +16,9 @@ REALM_NAME = config("REALM_NAME")
 ENCODED_REDIRECT_URI = config("ENCODED_REDIRECT_URI")
 
 
-def login(request):
-    return render(request, 'login.html', context={
-        'base_url': Base_URL,
-        'login_name': request.user.id
-    })
-
-
-def redirect(request):
-    return render(request, 'keycloakredirect.html')
-
-
-def profile(request, *args, **kwargs):
-    def get_user_roles(user_name):
+def get_user_roles(request):
+    try:
+        user_name = str(request.user)
         # get token
         data = {
             'client_id': client_id,
@@ -74,12 +64,29 @@ def profile(request, *args, **kwargs):
             user_roles[i] = raw_user_role2['realmMappings'][i]['name']
 
         return list(user_roles.values())
+    except:
+        return "NO_ROLES_ASSIGNED"
 
-    current_user = request.user
-    print(type(current_user))
-    roles = get_user_roles('user1')
+
+def login(request):
+    return render(request, 'login.html', context={
+        'base_url': Base_URL,
+        'login_name': request.user.id
+    })
+
+
+def redirect(request):
+    return render(request, 'keycloakredirect.html')
+
+
+def profile(request, *args, **kwargs):
+    roles = get_user_roles(request)
+    if "Basic_User" in roles:
+        access = "TRUE"
+    else:
+        access = "FALSE"
     usernames = {
-        'login_name': request.user,
-        'login_roles': roles
+        'login_roles': roles,
+        'basic_access': access
     }
     return render(request, 'profile.html', usernames)
