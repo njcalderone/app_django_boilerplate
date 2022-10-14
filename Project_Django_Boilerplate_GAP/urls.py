@@ -23,6 +23,7 @@ from Project_Django_Boilerplate_GAP import views
 
 urlpatterns = [
                   path('', views.login, name='login'),
+                  path('logout', views.login, name='logout'),
                   path('accounts/profile/', views.profile, name='profile'),
                   path('redirect/', views.redirect, name='redirect'),
                   path('admin/', admin.site.urls),

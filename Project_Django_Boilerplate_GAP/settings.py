@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*#(11q05tbi4j^u8f5p)tujsp82amuw#u%!#el)%prm@s2a)l+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+OIDC_OP_LOGOUT_URL_METHOD = 'Project_Django_Boilerplate_GAP.provider_logout'
 ALLOWED_HOSTS = ['*']
 
 # Application definition

@@ -18,6 +18,7 @@ ENCODED_REDIRECT_URI = config("ENCODED_REDIRECT_URI")
 
 def get_user_roles(request):
     try:
+        s = requests.session()
         user_name = str(request.user)
         # get token
         data = {
@@ -28,8 +29,8 @@ def get_user_roles(request):
         }
         url_1 = (keycloak_URL + 'auth/realms/master/protocol/openid-connect/token')
         print(url_1)
-        raw_response_JSON = requests.post(url_1, data=data)
-
+        raw_response_JSON = s.post(url_1, data=data)
+        s.cookies.keys()
         raw_json = raw_response_JSON.json()
 
         access_token = raw_json['access_token']
@@ -41,7 +42,8 @@ def get_user_roles(request):
             'Authorization': bearer,
         }
         url_2 = (keycloak_URL + 'auth/admin/realms/default/users?username=' + user_name + '&exact=true')
-        raw_response_JSON2 = requests.get(url_2, headers=headers1)
+        raw_response_JSON2 = s.get(url_2, headers=headers1)
+        s.cookies.keys()
         raw_json2 = raw_response_JSON2.json()
         raw_user_id = json.dumps(raw_json2[0], indent=4)
         raw_user_id2 = json.loads(raw_user_id)
@@ -54,7 +56,8 @@ def get_user_roles(request):
             'Authorization': bearer,
         }
         url_3 = (keycloak_URL + 'auth/admin/realms/default/users/' + user_id + '/role-mappings')
-        raw_response_JSON3 = requests.get(url_3, headers=headers2)
+        raw_response_JSON3 = s.get(url_3, headers=headers2)
+        s.cookies.keys()
         raw_json3 = raw_response_JSON3.json()
         raw_user_role = json.dumps(raw_json3, indent=4)
         raw_user_role2 = json.loads(raw_user_role)
@@ -62,31 +65,33 @@ def get_user_roles(request):
         user_roles = {}
         for i in range(0, len(raw_user_role3)):
             user_roles[i] = raw_user_role2['realmMappings'][i]['name']
-
+        s.cookies.clear()
+        s.cookies.keys()
         return list(user_roles.values())
+
     except:
         return "NO_ROLES_ASSIGNED"
-
 
 def login(request):
     return render(request, 'login.html', context={
         'base_url': Base_URL,
         'login_name': request.user.id
     })
-
+def logout(request):
+    return render(request, 'keycloakredirect.html')
 
 def redirect(request):
     return render(request, 'keycloakredirect.html')
 
 
 def profile(request, *args, **kwargs):
-    roles = get_user_roles(request)
-    if "Basic_User" in roles:
-        access = "TRUE"
-    else:
-        access = "FALSE"
+    #roles = get_user_roles(request)
+    #if "Basic_User" in roles:
+     #   access = "TRUE"
+    #else:
+     #   access = "FALSE"
     usernames = {
-        'login_roles': roles,
-        'basic_access': access
+        'login_roles': 'roles',
+        'basic_access': 'access',
     }
     return render(request, 'profile.html', usernames)
