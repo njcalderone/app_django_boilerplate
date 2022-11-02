@@ -29,7 +29,7 @@ def insert(request):
     member = Member(firstname=request.POST['firstname'], lastname=request.POST['lastname'],
                     address=request.POST['address'], phone=request.POST['phone'])
     member.save()
-    return redirect(Base_URL + '/datatables/index.html')
+    return redirect(Base_URL + 'datatables/index.html')
 
 
 from django.shortcuts import render

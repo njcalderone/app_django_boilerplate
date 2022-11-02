@@ -28,8 +28,6 @@ urlpatterns = [
                   path('redirect/', views.redirect, name='redirect'),
                   path('admin/', admin.site.urls),
                   path('accounts/', include('allauth.urls')),
-
                   path('datatables/index.html', views2.index, name='index'),
                   path('datatables/insert', views2.insert, name='insert'),
-                  path('admin/', admin.site.urls),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

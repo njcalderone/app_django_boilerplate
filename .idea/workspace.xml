@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89e7f679-bc6c-4258-a31d-a2979887af04" name="Changes" comment="" />
+    <list default="true" id="89e7f679-bc6c-4258-a31d-a2979887af04" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env_example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App_Data_Table/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/App_Data_Table/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App_Data_Table/views2.py" beforeDir="false" afterPath="$PROJECT_DIR$/App_Data_Table/views2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Django_Boilerplate_GAP/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +47,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Calderone/django_boilerplate&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/CyberSlayer/Visual_Studio_Code_Projects/app_django_boilerplate&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
@@ -78,6 +88,8 @@
       <workItem from="1664565737701" duration="7417000" />
       <workItem from="1665586738856" duration="19397000" />
       <workItem from="1665765891371" duration="2208000" />
+      <workItem from="1667408023423" duration="448000" />
+      <workItem from="1667411017477" duration="912000" />
     </task>
     <servers />
   </component>

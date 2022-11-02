@@ -98,7 +98,7 @@ TEMPLATES = [
 ]
 
 
-WSGI_APPLICATION = 'Project_Django_Boilerplate_GAP.wsgi.application'
+#WSGI_APPLICATION = 'Project_Django_Boilerplate_GAP.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

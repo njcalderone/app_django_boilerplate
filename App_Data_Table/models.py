@@ -1,7 +1,5 @@
 import os
-import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Project_Django_Boilerplate_GAP.settings')
-django.setup()
 from django.db import models
 
 
