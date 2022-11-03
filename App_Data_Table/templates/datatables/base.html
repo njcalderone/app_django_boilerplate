@@ -20,10 +20,10 @@
         $('#submit').on('click', function(){
             $firstname = $('#firstname').val();
             $lastname = $('#lastname').val();
-            $address = $('#address').val();
-            $phone = $('#phone').val();
+            $eyecolor = $('#eyecolor').val();
+            $height = $('#height').val();
 
-            if($firstname == "" || $lastname == "" || $address == "" || $phone == "" ){
+            if($firstname == "" || $lastname == "" || $eyecolor == "" || $height == "" ){
                 alert("Please complete field");
             }else{
                 $.ajax({
@@ -32,16 +32,16 @@
                     data:{
                         firstname: $firstname,
                         lastname: $lastname,
-                        address: $address,
-                        phone: $phone,
+                        eyecolor: $eyecolor,
+                        height: $height,
                         csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
                     },
                     success: function(){
                         alert('Save Data');
                         $('#firstname').val('');
                         $('#lastname').val('');
-                        $('#address').val('');
-                        $('#phone').val('');
+                        $('#eyecolor').val('');
+                        $('#height').val('');
                         window.location = "/datatables/index.html";
                     }
                 });
