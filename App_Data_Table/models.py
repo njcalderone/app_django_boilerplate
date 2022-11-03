@@ -13,3 +13,13 @@ class Member(models.Model):
 
     def __str__(self):
         return self.firstname, " ", self.lastname
+
+class Member2(models.Model):
+    objects = None
+    firstname = models.CharField(max_length=50)
+    lastname = models.CharField(max_length=50)
+    eyecolor = models.CharField(max_length=50)
+    height = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.firstname, " ", self.lastname
