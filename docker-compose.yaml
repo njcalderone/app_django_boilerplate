@@ -6,3 +6,19 @@ services:
     #command: python manage.py runserver 127.0.0.1:8000
     ports: 
       - 8000:8000
+  keycloak:
+    image: jboss/keycloak:16.1.1
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_LOGLEVEL=DEBUG
+      - KEYCLOAK_PASSWORD=admin
+      - DB_VENDOR=h2
+    expose:
+      - 8080
+    command:
+      - "-b 0.0.0.0"
+      - "-Dkeycloak.migration.action=import -Dkeycloak.migration.provider=singleFile -Dkeycloak.migration.file=/opt/jboss/keycloak/default_realm.json -Dkeycloak.migration.strategy=OVERWRITE_EXISTING"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./keycloak/default_realm.json:/opt/jboss/keycloak/default_realm.json
