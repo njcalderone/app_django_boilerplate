@@ -13,7 +13,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 Base_URL = config("SITE_BASE_URL")
 KEYCLOAK_URL = config("KEYCLOAK_URL")
 REALM_NAME = config("REALM_NAME")
-ENCODED_REDIRECT_URI = config("ENCODED_REDIRECT_URI")
+
 
 
 def get_user_roles(request):
@@ -85,13 +85,13 @@ def redirect(request):
 
 
 def profile(request, *args, **kwargs):
-    #roles = get_user_roles(request)
-    #if "Basic_User" in roles:
-     #   access = "TRUE"
-    #else:
-     #   access = "FALSE"
+    roles = get_user_roles(request)
+    if "Basic_User" in roles:
+       access = "TRUE"
+    else:
+        access = "FALSE"
     usernames = {
-        'login_roles': 'roles',
-        'basic_access': 'access',
+        'login_roles': roles,
+        'basic_access': access,
     }
     return render(request, 'profile.html', usernames)
