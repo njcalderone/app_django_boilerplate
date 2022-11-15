@@ -1,154 +1,376 @@
-<<<<<<< HEAD
-<h1>GAP Django Boilerplate template</h1>
-Motivation: Devs want to get an app into production ASAP, and don't want to spend time on certificates, security, user management, or implementing a consistent graphic style/theme.
+GAP Django Boilerplate template ([Clean Verion Confluence](https://confluence.tools.jadeuc.com/display/GP/GAP+Django+Boilerplate+template))
 
-<h2>Contents</h2>
-<a id="Design Requirements">Design Requirements</a>
+STILL UNDER CONSTRUCTION "NOT FOR USE"
 
-<a id="Local Requirements and Set Up">Local Requirements and Set Up</a>
+NOTE TO ME : go edit all web links and add libraries to static in app
 
-<a id="Design Requirements">Design Requirements</a>
-
-<a id="Design Requirements">Design Requirements</a>
-
-
-<h2>Design Requirements</h2>
-    
-    TLDR for local dev
-    Client
-    Server
-    Database
-    Keycloak Auth (All-Auth)
-    Local Development
-
-
-<h2>Local Requirements and Set Up</h2>
-
-<h3>Django Boilerplate</h3>
-
-<h4> Django Admin:</h4>
-<h4> Your .env file:</h4>
-
-### Docker:
-
-<h4>Installation instructions</h4>
-Install Docker on your local system
-Download and install from: 
-
-### Keycloak:
-
-<h4>Installation instructions</h4>
-Git clone Repository 
-`code block`
-#### Your .env file:
-
-## Local Modification
-
-### Keycloak:
-
-### App Data Table:
-
-#### Add fields:
-
-#### Remove fields:
-
-### Templates:
-
-### Views:
-
-### Add additional app:
-
-=======
-# app_django_boilerplate
+Contents
+Application Overview
+Design Requirements
+Local Requirements and Set Up
+SSH Key Gitlab Set Up
+Generate a personal access token
+Create your Gitlab project
+Set up your IDE & Project: (Using Visual Studios code)
+Modify and link your own data table
+Application Overview
 
 
 
-## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
-## Add your files
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+Design Requirements
 
-```
-cd existing_repo
-git remote add origin https://gitlab.jadeuc.com/gap/bza/gap_django_boilerplate/app_django_boilerplate.git
-git branch -M main
-git push -uf origin main
-```
+Django Framework
 
-## Integrate with your tools
+Database integration
 
-- [ ] [Set up project integrations](https://gitlab.jadeuc.com/gap/bza/gap_django_boilerplate/app_django_boilerplate/-/settings/integrations)
+Role Based Access Controls RBAC
 
-## Collaborate with your team
+Keycloak (All-Auth)
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+Local Development
 
-## Test and Deploy
 
-Use the built-in continuous integration in GitLab.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
 
-***
 
-# Editing this README
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
-## Name
-Choose a self-explaining name for your project.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+Local Requirements and Set Up
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+SSH Key Gitlab Set Up:
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+Create GitLab SSH Keys with ssh-keygen
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+Both Ubuntu and Windows machines support SSH out of the box.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+Updated versions of Windows 10 and Windows Server have built-in support since 2018, so there is no need to download Putty, PuttyGen or Plink to create RAS keys or to SSH in to GitLab. Just open PowerShell in Windows or a Linux terminal window on Ubuntu  or Mac OSx terminal and issue the following command:
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+C:\gitlab\ssh\example> ssh-keygen -o -t rsa -b 4096 -C "ssh-keygen@gitlab.jadeuc.com"
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+The options provided to the ssh-keygen command force the tool to create an RSA compatible key using the latest OpenSSL standards. The -C switch simply adds a comment to the end of the public file.
 
-## License
-For open source projects, say how it is licensed.
+Accept all of the defaults when prompted for a passphrase or a special storage location. By default, all GitLab SSH keys must go in an .ssh folder under the user’s home directory. Furthermore, a blank passphrase is acceptable unless your organization’s compliance rules state otherwise.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
->>>>>>> d8f6c998e7aeecffb30c7d0f90d7f611e0b6ddc2
+This operation will create Git SSH keys named id_ras.pub and id_rsa respectively.
+
+Copy the public SSH key
+
+You must configure the value of the public key in GitLab. Open the public key in a text editor and copy the value to the clipboard:
+
+Copy the .pub key produced from the GitLab SSH key generation operation and configure it into GitLab.
+
+Configure GitLab SSH keys
+
+Log into GitLab and click on your account preferences.
+
+Click the SSH Keys link and paste the copied value into the text field.
+
+Set an expiration date, and then click the blue button to persistently add the GitLab SSH key.
+
+Configure GitLab SSH keys under your account preferences.
+
+Generate a Personal Access Token
+
+Continue under preferences and select access tokens on the left hand side
+
+ I would name the token based on the IDE you are using. Also notice that you can chose an expiration date for the token. I would also give the token full permissions as shown below. Then I would click generate personal access token.
+
+Next copy and save that token temporarily to a local .txt . You will need it later
+
+Create your Gitlab project
+
+Go to https://gitlab.jadeuc.com/gap/bza/ and click new sub group. 
+
+Recommend naming it with the following convention <"your project name">.I would leave the project private until your ready to share it with the rest of the Gitlab teams. Then Click create sub group
+
+
+
+
+Then fork the 
+
+Click create blank project. Recommend naming it using  the following convention <app_"your project name">
+
+Click create project then go back to your 
+
+Then create another new project with that subgroup. Recommend naming it with the following convention <keycloak_"your project name">
+
+Click create blank project. Recommend naming it using  the following convention <keycloak_"your project name">
+
+Click create project
+
+
+
+
+Now you need to fork the app_django_boilerplate into the subgroup you created above
+
+got to https://gitlab.jadeuc.com/gap/bza/gap_django_boilerplate/app_django_boilerplate.git and click fork
+
+change the project name using the following format "app_<your project  name>" Then Change the name space to the location of your project sub group. Project slug will auto populate when you create the project name. Select your visibility level. ( you can always change it later )
+
+Now you need to fork the keycloak_django_boilerplate into the subgroup you created above
+
+got to  https://gitlab.jadeuc.com/gap/bza/gap_django_boilerplate/keycloak_django_boilerplate and click fork
+
+change the project name using the following format "keycloak_<your project  name>" Then Change the name space to the location of your project sub group. Project slug will auto populate when you create the project name. Select your visibility level. ( you can always change it later )
+
+Set up your IDE & Project: (Using Visual Studios code)
+
+Install visual studios code (download and install the proper version for your OS)
+
+Install all of the following extension
+
+Also add:
+
+Clone your keycloak_<your_app_name>  from the fork you created earlier
+
+copy the git link for your keycloak_<your_app_name>
+
+############edit photo to demo
+
+ then open VS Code and click "clone git repository" 
+
+then paste the git link into the clone from url bar and click enter
+
+next create and select a parent folder for all of your applications. I created a folder called  "Visual_Studio_Code_Projects" in my home directory. Make sure you select this folder as the location you want to clone your keycloak application to.
+
+click enter  and select open in "new window"
+
+
+
+
+Clone your app_<your_app_name> from the fork you created earlier
+
+Repeat. the same process you used for  "Clone your keycloak_<your_app_name>" This time you will use the same folder you selected in the step above.
+
+your final directory should look like this:
+
+Django setup with pyenv + Poetry on macOS (Original Cited Material from Jason Yee)
+
+Install pyenv and a specific version of Python for python version management which ensures you’ve got python the required python environment
+Install poetry for dependency management which ensure you’ve got the right packages installed in your environment like django.
+Test our dev setup by starting & launching your django app
+Prerequisite
+
+1/5: Install homebrew (https://mac.install.guide/homebrew/index.html, you may have to install Xcode command line tools)
+2/5 Install pyenv and a specific version of python
+
+Go to your dev project directory and create a folder for your project. In this example, my dev dir is ~/Visual_Studio_Code_Projects/<project_name>.
+
+Install pyenv with homebrew.
+
+open Terminal using the Visual studios code Upper toolbar
+
+$ cd ~/Visual_Studio_Code_Projects/<project_name>
+
+$ brew install pyenv
+
+Once this is complete, update your ~/.zshrc to include the lines that pyenv init instructs you to do and restart your shell.
+
+$ pyenv init
+
+Modify .zprofile]
+
+$ cd ~
+$ vim .zprofile
+
+scroll down past the initial text and press(i) to insert the following text:
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"  
+
+Then save and exit vim by pressing escape twice and then type ":wq" and enter
+
+$ touch ~/.zshrc
+
+Modify .zprofile
+
+$ cd ~
+$ vim .zshrc
+
+scroll down past the initial text and press() to insert the following text:
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"  
+
+Then save and exit vim by pressing escape twice and then type ":wq" and enter
+
+Next you need to Initiate your pyenv and install the proper python version for your project
+
+$ pyenv init
+$ pyenv install 3.10.2
+
+Exit terminal
+Open new terminal
+
+$ cd ~/Visual_Studio_Code_Projects/<project_name>
+$ pyenv local 3.10.2
+$ ls -la
+
+-rw-r--r--   1 username  staff    7 Jun 28 15:09 .python-version
+
+
+Notice that after I create run the pyenv command, it creates a .python-version file that notes the version of python I want. This has the effect of ensuring that running python in any subfolder of this will run the specific python version unless other pyenv settings are set. Read more about pyenv here: https://github.com/pyenv/pyenv#how-it-works
+
+3/5 Install poetry and dependencies
+
+Install poetry with homebrew.
+
+$ brew install poetry
+
+Now, update the poetry env by specifying the pyenv — this is a very important step. When you installed poetry, it installed python 3.10.5 as your system python so you need to override this by specifying the right env to poetry with 
+
+$ poetry env use $(pyenv which python). You only need to do this once
+
+$ poetry env info 
+
+Virtualenv
+Python:         3.10.2
+Implementation: CPython
+Path:           /Users/CyberSlayer/Library/Caches/pypoetry/virtualenvs/django-boilerplate-gap-gDsY__FE-py3.10
+Executable:     /Users/CyberSlayer/Library/Caches/pypoetry/virtualenvs/django-boilerplate-gap-gDsY__FE-py3.10/bin/python
+Valid:          True
+
+System
+Platform:   darwin
+OS:         posix
+Python:     3.10.2
+Path:       /Users/CyberSlayer/.pyenv/versions/3.10.2
+Executable: /Users/CyberSlayer/.pyenv/versions/3.10.2/bin/python3.10
+
+Now you can create the environment with poetry install and add the dependencies you want with the poetry add command. 
+
+$ poetry install
+
+Updating dependencies
+.
+
+Note: if you see an error message like the below, delete your poetry env with poetry env remove 3.10.2and make sure you ran poetry env use $(pyenv which python)
+
+The currently activated Python version 3.10.5 is not supported by the project (3.10.2).
+Trying to find and use a compatible version.
+
+4/5 Run Local Keycloak 
+
+Make sure Docker is running on your system.
+
+Then return to your keycloak project in VS Code
+
+Open a new terminal and enter the following command:
+
+$ docker-compose up
+
+when it is loaded you should see something similar to the following
+
+"You now have a local running keycloak"
+
+5/5 Run Your Application
+
+Start a shell with poetry shell and note the change to your prompt and the location of your dependencies.
+
+$ cd ~/Visual_Studio_Code_Projects/<project_name>
+
+$ poetry shell
+
+$ python manage.py runserver
+
+Watching for file changes with StatReloader
+Performing system checks...System check identified no issues (0 silenced).
+Run 'python manage.py migrate' to apply them.
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Success! screenshot courtesy of author
+
+Pausing
+
+When you’re doing developing locally and want to exit the poetry shell, exit the shell/virtualenv context as normal or close the terminal window to end the session. Once this is done, the prompt won’t have the virtualenv in parentheses above it and you’ll see that you don’t have any of your dependencies available to pip.
+
+$ exit
+$ pip freeze 
+# nothing here
+
+Resuming
+
+When you want to do dev in this project again, navigate to the folder or a subfolder of where you created the .python-version file and pyproject.toml files and re-run poetry shell. pyenv will make sure that right version of python is available.
+
+$ cd ~/code/django-mozilla
+$ poetry shell
+
+Spawning shell within /Users/jyee/Library/Caches/pypoetry/virtualenvs/django-mozilla-aI61n14v-py3.10
+
+$ python -V
+
+Python 3.10.2
+
+Modify and link your own Data Table
+
+In order to modify and add fields you will need to open two files:
+
+App_Data_Table/models.py & db.sqlite3 (found in the root of the project folder)
+
+In your App_Data_Table/models.py App_Data_Table_<your new class> "For demonstration purposes I will name mine App_Data_Table_member2"
+
+copy your the original class an and past it in the lines bellow:
+
+Make sure to modify and add the field names you want to include.
+
+
+
+
+Next you will see the database explorer in your sidebar
+
+click the data base icon.
+
+Then select your database for this demonstration  I will select sqLite and add copy the directory link and past it into the path field box . 
+
+once you past the link into the path field click save and a new view should pop up  in the same area where your file explore was click the first drop down arrow and then click the drop down for tables and select tables an click the + icon to add a new table:
+
+then rename the highlighted text App_Data_Table_<your new class> (make sure you lowercase the first letter regardless of the case of the class in model.py
+
+click the play button in the upper right corner:
+
+
+
+
+Click the plus icon to add new column make sure the new column is spelled and capitalized exactly the same as your model.py:
+
+when you have edited the alter-template.sql to include one of those columns click the play button. Repeat this for each column you want to add.
+
+Open up App_Data_Table/views2.py and modify the following:
+
+ change all instances of Member to Member2 and change column names to your new column names:
+
+ Then open App_Data_Table/templates/datatables/base.html and modify the old tags of 
+
+address & phone and replace them with eyecolor and height 
+
+You can do this my doing a control F on the active window  select the down arrow and use find and replace.
+
+repeat this process for App_Data_Table/templates/datatables/index.html
+
+
+
+
+Test it in browser and verify changes have taken effect.
+
+
+
+
+If the step above was successful then you should go back and clean up old artifacts in the models.py and remove "member" Not "Member2"
+
+Then go to the database and drop the old "Member" table:
+
+For more info on additional modification or updating the jquery.dataTables.min.js file see 
+
