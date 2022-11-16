@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.keycloak',
 
-    'App_Data_Table',
+    # apps 
+    'App_CRUD.apps.EmployeeConfig',
 
 ]
 
@@ -151,7 +152,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'Project_Django_Boilerplate_GAP/static/'),
     os.path.join(BASE_DIR, 'App_Data_Table/static/')
 ]
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
