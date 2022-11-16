@@ -1,17 +1,17 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Employee
+from .models import TOA
 
-class EmployeeForm(ModelForm):
+class TOAForm(ModelForm):
     class Meta:
-        model = Employee
+        model = TOA
         
-        fields = ('emp_name', 'emp_email', 'emp_contact', 'emp_role', 'emp_salary', 'image')
+        fields = ('toa_name', 'toa_summary', 'toa_contact', 'toa_latitude', 'toa_longitude', 'image')
 
         widgets = {
-            'emp_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Name'}),
-            'emp_email': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email'}),
-            'emp_contact': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Contact No.'}),
-            'emp_role': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Role'}),
-            'emp_salary': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Salary'}),
+            'toa_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Name'}),
+            'toa_summary': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Summary'}),
+            'toa_contact': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Contact'}),
+            'toa_latitude': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Latitude'}),
+            'toa_longitude': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Longitude'}),
         }

@@ -1,11 +1,11 @@
-{% extends 'employee/base.html' %}
+{% extends 'toa/base.html' %}
 
 {% block title %}
-    <title>Create</title>
+    <title>Edit</title>
 {% endblock title %}
 
 {% block content %}
-    <h1 style="text-align: center; padding-top: 1em; padding-bottom: 1em;">Add New Employee Information</h1>
+    <h1 style="text-align: center; padding-top: 1em; padding-bottom: 1em;">Edit TOA Information</h1>
 
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}

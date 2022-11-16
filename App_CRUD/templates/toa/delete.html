@@ -1,4 +1,4 @@
-{% extends 'employee/base.html' %}
+{% extends 'toa/base.html' %}
 
 {% block title %}
     <title>Delete</title>
@@ -9,12 +9,12 @@
         {% csrf_token %}
 
         <br><br>
-        <div class="alert alert-danger" role="alert">
-            Are you sure you want to delete "{{ employee.emp_name }}"?
+        <div class="alert alert-danger" Latitude="alert">
+            Are you sure you want to delete "{{ toa.toa_name }}"?
         </div>
         
         <p>
-            <a href="{% url 'employees-list' %}"> <-- Go back</a>
+            <a href="{% url 'toas-list' %}"> <-- Go back</a>
         </p>
 
         <p>

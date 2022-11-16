@@ -27,8 +27,8 @@ urlpatterns = [
                   path('redirect/', views.redirect, name='redirect'),
                   path('admin/', admin.site.urls),
                   path('accounts/', include('allauth.urls')),
-                  path('CRUD/list/', views_CRUD.employees_list, name='employees-list'),
-                  path('CRUD/create/', views_CRUD.create_employee, name='create-employee'),
-                  path('CRUDE/edit/<str:pk>/', views_CRUD.edit_employee, name='edit-employee'),
-                  path('CRUDE/delete/<str:pk>/', views_CRUD.delete_employee, name='delete-employee'),
+                  path('CRUD/list/', views_CRUD.toas_list, name='toas-list'),
+                  path('CRUD/create/', views_CRUD.create_toa, name='create-toa'),
+                  path('CRUDE/edit/<str:pk>/', views_CRUD.edit_toa, name='edit-toa'),
+                  path('CRUDE/delete/<str:pk>/', views_CRUD.delete_toa, name='delete-toa'),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

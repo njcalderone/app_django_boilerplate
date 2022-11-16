@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.keycloak',
 
     # apps 
-    'App_CRUD.apps.EmployeeConfig',
+    'App_CRUD.apps.TOAConfig',
 
 ]
 
@@ -150,7 +150,7 @@ STATIC_ROOT = BASE_DIR / "static"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'Project_Django_Boilerplate_GAP/static/'),
-    os.path.join(BASE_DIR, 'App_Data_Table/static/')
+    os.path.join(BASE_DIR, 'App_CRUD/static/')
 ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

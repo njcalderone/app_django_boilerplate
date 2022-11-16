@@ -1,11 +1,11 @@
-{% extends 'employee/base.html' %}
+{% extends 'toa/base.html' %}
 
 {% load socialaccount %}
 {% load Project_Django_Boilerplate_Gap_Extras %}
 {% load static %}
 {% load i18n %}
 {% block title %}
-    <title>Employee List</title>
+    <title>TOA List</title>
 {% endblock title %}
 {% if user.is_authenticated %}
 {% block content %}
@@ -13,13 +13,13 @@
 {% include 'snippet/web_banner.html' %}
 {% include 'snippet/web_footer.html' %}
 {% if basic_access  == "TRUE" %}
-    <h1 style="text-align: center; padding-top: 1em; padding-bottom: 1em;">Employees Information</h1>
+    <h1 style="text-align: center; padding-top: 1em; padding-bottom: 1em;">toas Information</h1>
 
     <!-- Search section  -->
     <div class="center-form" style="display: flex; justify-content: center;">
-        <form action="{% url 'employees-list' %}" method="GET" style="width: 500px;">
+        <form action="{% url 'toas-list' %}" method="GET" style="width: 500px;">
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Search by employee name, role, or salary" aria-label="" aria-describedby="basic-addon1" style="margin-right: 10px;"
+              <input type="text" class="form-control" placeholder="Search by toa name, Latitude, or Longitude" aria-label="" aria-describedby="basic-addon1" style="margin-right: 10px;"
               name="search_query" value="{{ search_query }}"/>
     
               <input class="btn btn-success" type="submit" value="Search"/>
@@ -33,27 +33,27 @@
             <tr>
                 <th scope="col">Image</th>
                 <th scope="col">Name</th>
-                <th scope="col">Email</th>
+                <th scope="col">Summary</th>
                 <th scope="col">Contact</th>
-                <th scope="col">Role</th>
-                <th scope="col">Salary</th>
+                <th scope="col">Latitude</th>
+                <th scope="col">Longitude</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
-            {% for emp in employees %}
+            {% for emp in toas %}
                 <tr>
                     <th scope="row">
                         <img style="height: 100px; width: auto;" src="{{ emp.imageURL }}" class="card-img-top" alt="...">
                     </th>
-                    <th scope="row">{{ emp.emp_name }}</th>
-                    <td>{{ emp.emp_email }}</td>
-                    <td>{{ emp.emp_contact }}</td>
-                    <td>{{ emp.emp_role }}</td>
-                    <td>{{ emp.emp_salary }}</td>
+                    <th scope="row">{{ emp.toa_name }}</th>
+                    <td>{{ emp.toa_summary }}</td>
+                    <td>{{ emp.toa_contact }}</td>
+                    <td>{{ emp.toa_latitude }}</td>
+                    <td>{{ emp.toa_longitude }}</td>
                     <td>
-                        <a style="margin-right: 30px;" href="{% url 'edit-employee' emp.id %}">Edit</a>
-                        <a href="{% url 'delete-employee' emp.id %}">Remove</a>
+                        <a style="margin-right: 30px;" href="{% url 'edit-toa' emp.id %}">Edit</a>
+                        <a href="{% url 'delete-toa' emp.id %}">Remove</a>
                     </td>
                 </tr>
             {% endfor %}
@@ -61,7 +61,7 @@
     </table>
 
     <div class="text-center">
-        <a href="{% url 'create-employee' %}"><button type="button" class="btn btn-primary">Add New Info</button></a>
+        <a href="{% url 'create-toa' %}"><button type="button" class="btn btn-primary">Add New Info</button></a>
     </div>
 
 {% else %}
