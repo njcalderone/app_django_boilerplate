@@ -1,11 +1,19 @@
 version: '3'
 
 services:
-  web:
-    build: .
-    #command: python manage.py runserver 127.0.0.1:8000
-    ports: 
+  django:
+    build:
+      context: django
+      dockerfile: ./Dockerfile
+    environment:
+      - DEBUG_MODE=True  
+    #command: ["poetry", "run", "gunicorn", "--bind", ":8000", "--workers", "1", "Project_Django_Boilerplate_GAP.wsgi"]
+    ports:
       - 8000:8000
+      - 5678:5678
+    volumes:
+      - ./django/:/Django_app
+
   keycloak:
     image: jboss/keycloak:16.1.1
     environment:

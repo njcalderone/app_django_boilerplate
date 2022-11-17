@@ -59,6 +59,14 @@ ssh = ["bcrypt (>=3.1.5)"]
 test = ["hypothesis (>=1.11.4,!=3.79.2)", "iso8601", "pretend", "pytest (>=6.2.0)", "pytest-benchmark", "pytest-cov", "pytest-subtests", "pytest-xdist", "pytz"]
 
 [[package]]
+name = "debugpy"
+version = "1.6.3"
+description = "An implementation of the Debug Adapter Protocol for Python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "defusedxml"
 version = "0.7.1"
 description = "XML bomb protection for Python stdlib modules"
@@ -220,6 +228,14 @@ description = "Internationalized Domain Names in Applications (IDNA)"
 category = "main"
 optional = false
 python-versions = ">=3.5"
+
+[[package]]
+name = "multiprocessing"
+version = "2.6.2.1"
+description = "Backport of the multiprocessing package to Python 2.4 and 2.5"
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "oauthlib"
@@ -468,7 +484,7 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "2cb1fd1b82d1a56f5eeb535bd2371f4ec7c248aff367ec2a0b1e322f4585e998"
+content-hash = "6cc81f741b4ab8c53c374b6d62dda91c2b720f86c1d1db00972823dcf39f28e1"
 
 [metadata.files]
 asgiref = [
@@ -577,6 +593,26 @@ cryptography = [
     {file = "cryptography-38.0.3-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:785e4056b5a8b28f05a533fab69febf5004458e20dad7e2e13a3120d8ecec75a"},
     {file = "cryptography-38.0.3.tar.gz", hash = "sha256:bfbe6ee19615b07a98b1d2287d6a6073f734735b49ee45b11324d85efc4d5cbd"},
 ]
+debugpy = [
+    {file = "debugpy-1.6.3-cp310-cp310-macosx_10_15_x86_64.whl", hash = "sha256:c4b2bd5c245eeb49824bf7e539f95fb17f9a756186e51c3e513e32999d8846f3"},
+    {file = "debugpy-1.6.3-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:b8deaeb779699350deeed835322730a3efec170b88927debc9ba07a1a38e2585"},
+    {file = "debugpy-1.6.3-cp310-cp310-win32.whl", hash = "sha256:fc233a0160f3b117b20216f1169e7211b83235e3cd6749bcdd8dbb72177030c7"},
+    {file = "debugpy-1.6.3-cp310-cp310-win_amd64.whl", hash = "sha256:dda8652520eae3945833e061cbe2993ad94a0b545aebd62e4e6b80ee616c76b2"},
+    {file = "debugpy-1.6.3-cp37-cp37m-macosx_10_15_x86_64.whl", hash = "sha256:d5c814596a170a0a58fa6fad74947e30bfd7e192a5d2d7bd6a12156c2899e13a"},
+    {file = "debugpy-1.6.3-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:c4cd6f37e3c168080d61d698390dfe2cd9e74ebf80b448069822a15dadcda57d"},
+    {file = "debugpy-1.6.3-cp37-cp37m-win32.whl", hash = "sha256:3c9f985944a30cfc9ae4306ac6a27b9c31dba72ca943214dad4a0ab3840f6161"},
+    {file = "debugpy-1.6.3-cp37-cp37m-win_amd64.whl", hash = "sha256:5ad571a36cec137ae6ed951d0ff75b5e092e9af6683da084753231150cbc5b25"},
+    {file = "debugpy-1.6.3-cp38-cp38-macosx_10_15_x86_64.whl", hash = "sha256:adcfea5ea06d55d505375995e150c06445e2b20cd12885bcae566148c076636b"},
+    {file = "debugpy-1.6.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:daadab4403427abd090eccb38d8901afd8b393e01fd243048fab3f1d7132abb4"},
+    {file = "debugpy-1.6.3-cp38-cp38-win32.whl", hash = "sha256:6efc30325b68e451118b795eff6fe8488253ca3958251d5158106d9c87581bc6"},
+    {file = "debugpy-1.6.3-cp38-cp38-win_amd64.whl", hash = "sha256:86d784b72c5411c833af1cd45b83d80c252b77c3bfdb43db17c441d772f4c734"},
+    {file = "debugpy-1.6.3-cp39-cp39-macosx_10_15_x86_64.whl", hash = "sha256:4e255982552b0edfe3a6264438dbd62d404baa6556a81a88f9420d3ed79b06ae"},
+    {file = "debugpy-1.6.3-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:cca23cb6161ac89698d629d892520327dd1be9321c0960e610bbcb807232b45d"},
+    {file = "debugpy-1.6.3-cp39-cp39-win32.whl", hash = "sha256:7c302095a81be0d5c19f6529b600bac971440db3e226dce85347cc27e6a61908"},
+    {file = "debugpy-1.6.3-cp39-cp39-win_amd64.whl", hash = "sha256:34d2cdd3a7c87302ba5322b86e79c32c2115be396f3f09ca13306d8a04fe0f16"},
+    {file = "debugpy-1.6.3-py2.py3-none-any.whl", hash = "sha256:84c39940a0cac410bf6aa4db00ba174f973eef521fbe9dd058e26bcabad89c4f"},
+    {file = "debugpy-1.6.3.zip", hash = "sha256:e8922090514a890eec99cfb991bab872dd2e353ebb793164d5f01c362b9a40bf"},
+]
 defusedxml = [
     {file = "defusedxml-0.7.1-py2.py3-none-any.whl", hash = "sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61"},
     {file = "defusedxml-0.7.1.tar.gz", hash = "sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69"},
@@ -621,6 +657,9 @@ gunicorn = [
 idna = [
     {file = "idna-3.4-py3-none-any.whl", hash = "sha256:90b77e79eaa3eba6de819a0c442c0b4ceefc341a7a2ab77d7562bf49f425c5c2"},
     {file = "idna-3.4.tar.gz", hash = "sha256:814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"},
+]
+multiprocessing = [
+    {file = "multiprocessing-2.6.2.1.tar.gz", hash = "sha256:ef3b81ad85d7de252e5491b1daac028e17f9741cbe3625032e6eaa4ad4c79900"},
 ]
 oauthlib = [
     {file = "oauthlib-3.2.2-py3-none-any.whl", hash = "sha256:8139f29aac13e25d502680e9e19963e83f16838d48a0d71c287fe40e7067fbca"},
