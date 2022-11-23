@@ -1,5 +1,19 @@
 FROM mateusoliveira43/poetry:1.2.2-python3.10.8-slim-bullseye
 ENV PYTHONUNBUFFERED 1
+#=====================TEST ENVs===================
+ENV DJANGO_SETTINGS_MODULE Project_Django_Boilerplate_GAP.settings
+ENV DJANGO_ADMIN_USER admin
+ENV DJANGO_ADMIN_EMAIL admin@info.com
+ENV DJANGO_ADMIN_PASS admin
+ENV KEYCLOAK_CLIENT_ID DjangoApp
+ENV KEYCLOAK_CLIENT_SECRET 4ph4iZ83f4YpBALCNFkndL9UbiPEVGcf
+ENV SITE_BASE_URL http://host.docker.internal:8000/
+ENV KEYCLOAK_URL http://host.docker.internal:8080/
+ENV REALM_NAME default
+ENV KEYCLOAK_ADMIN_CLIENT_ID admin-cli
+ENV KEYCLOAK_ADMIN_USERNAME admin
+ENV KEYCLOAK_ADMIN_PASSWORD admin
+#=====================+++++++===================
 WORKDIR /Django_app
 ADD . /Django_app
 EXPOSE 8000

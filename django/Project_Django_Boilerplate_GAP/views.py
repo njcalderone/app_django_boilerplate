@@ -2,17 +2,16 @@ import os
 import json
 import requests
 from django.shortcuts import render
-from decouple import config
 
-keycloak_URL = config("KEYCLOAK_URL")
-client_id = config("KEYCLOAK_ADMIN_CLIENT_ID")
-username = config("KEYCLOAK_ADMIN_USERNAME")
-password = config("KEYCLOAK_ADMIN_PASSWORD")
+keycloak_URL = os.getenv('KEYCLOAK_URL')
+client_id = os.getenv('KEYCLOAK_ADMIN_CLIENT_ID')
+username = os.getenv('KEYCLOAK_ADMIN_USERNAME')
+password = os.getenv('KEYCLOAK_ADMIN_PASSWORD')
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-Base_URL = config("SITE_BASE_URL")
-KEYCLOAK_URL = config("KEYCLOAK_URL")
-REALM_NAME = config("REALM_NAME")
+Base_URL = os.getenv('SITE_BASE_URL')
+KEYCLOAK_URL = os.getenv('KEYCLOAK_URL')
+REALM_NAME = os.getenv('REALM_NAME')
 
 
 
