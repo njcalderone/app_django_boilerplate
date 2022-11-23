@@ -1,0 +1,19 @@
+"use the below comands modify the <tags> with your specific info"
+
+Use "docker ps" command to display containers and ther ids
+then use the below commands:
+
+docker exec -it <"keycloak container id"> sh
+
+/opt/jboss/keycloak/bin/standalone.sh \
+    -Dkeycloak.migration.action=export \
+    -Dkeycloak.migration.provider=singleFile \
+    -Dkeycloak.migration.file=/tmp/keycloak-gbp-export.json \
+    -Dkeycloak.migration.realmName=default \
+    -Djboss.socket.binding.port-offset=100
+
+Exit
+docker cp 0ed:/tmp/keycloak-gbp-export.json ~/Desktop
+
+
+This will place the new realm chart that you can rename and replace the default_realm.json

@@ -1,0 +1,112 @@
+/* General */
+/* html {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+} */
+
+/* body {
+  margin: 20px 0;
+  overflow: auto;
+
+  color: #fff;
+} */
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.p-menu1{
+    height: 100%;
+}
+/* Hamburger */
+.hamburger1 {
+    height: 45px;
+    margin: 10px;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: left;
+    z-index: 120;
+}
+
+.hamburger1 div {
+    background-color: white;
+    position: relative;
+    width: 50%;
+    height: 30%;
+    margin-top: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#toggle1 {
+    display: none;
+}
+
+#toggle1:checked + .hamburger1 .top {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: 22.5px;
+}
+
+#toggle1:checked + .hamburger1 .meat {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: -5px;
+}
+
+#toggle1:checked + .hamburger1 .bottom {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+#toggle1:checked ~ .menu1 {
+    height: 800%;
+}
+
+
+/* Menu */
+.menu1 {
+    width: 100%;
+    background-color: #2E314E;
+    margin: 0;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 1fr repeat(4, 0.5fr);
+    grid-row-gap: 0;
+    padding: 0;
+    list-style: none;
+    clear: both;
+    width: auto;
+    text-align: left;
+    height: 0px;
+    overflow: hidden;
+    transition: height .4s ease;
+    z-index: 120;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.menu1 a:first-child {
+    margin-top: 30%;
+}
+
+.menu1 a:last-child {
+    margin-bottom: 30%;
+}
+
+.link1 {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    font: 700 20px 'Oswald', sans-serif;
+}
+
+.link1:hover {
+    background-color:grey;
+    color: white;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}

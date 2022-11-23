@@ -1,0 +1,24 @@
+{% extends 'toa/base.html' %}
+
+{% block title %}
+    <title>Delete</title>
+{% endblock title %}
+
+{% block content %}
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <br><br>
+        <div class="alert alert-danger" Latitude="alert">
+            Are you sure you want to delete "{{ toa.toa_name }}"?
+        </div>
+        
+        <p>
+            <a href="{% url 'toas-list' %}"> <-- Go back</a>
+        </p>
+
+        <p>
+            <input class="btn btn-danger" type="submit" value="Confirm">
+        </p>
+    </form>
+{% endblock content %}

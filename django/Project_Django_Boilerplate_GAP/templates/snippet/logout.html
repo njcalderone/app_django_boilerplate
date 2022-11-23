@@ -1,0 +1,11 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/boilerplate.css' %}">
+<form style="position:absolute; top:0; right:0;" method="post" action="http://127.0.0.1:8080/auth/realms/default/protocol/openid-connect/logout?redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2F%0A">
+    {% csrf_token %}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+    {% endif %}
+    <button type="submit">Sign Out</button>
+</form>
+<!DOCTYPE html>
+<html>

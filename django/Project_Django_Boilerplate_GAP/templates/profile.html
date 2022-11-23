@@ -1,0 +1,45 @@
+<!-- templates/login.html -->
+{% load socialaccount %}
+{% load Project_Django_Boilerplate_Gap_Extras %}
+{% load static %}
+{% load i18n %}
+{% if user.is_authenticated %}
+{% include 'snippet/head.html' %}
+{% include 'snippet/web_banner.html' %}
+{% include 'snippet/web_footer.html' %}
+{% block content %}
+{% if basic_access  == "TRUE" %}
+<div style="position:absolute;top:12%;bottom:12%;left:12%;background-color: white">
+<body>
+
+<h1 style="color:black;text-align: center;font-size: 110%" >Hello <u>{{ user.username }}</u> welcome to your first GAP app</h1>
+<p style="margin: 5%;color:black;text-align: justify;font-size: 100%; text-indent:40px">This is the area that people will first read to understand you app.
+    Please do your best to briefly describe the intent and purpose of your application.
+</p>
+<p style="margin: 5%;color:black;text-align: justify;font-size: 100%; text-indent:40px"> Use the side links to navigate between your sub apps that you create.
+    Use the top panel to link out to other GAP internal applications.
+</p>
+
+</body>
+
+</div>
+{% else %}
+<div style="position:absolute;top:12%;bottom:12%;left:12%;background-color: white">
+<h1 style="color:black;text-align: center;font-size: 110%">"You don't have the proper access to see this page"</h1>
+    <img style='display: block;margin-left: auto;margin-right: auto;width: 50%' src="{% static 'img/You_Shall_Not_Pass!_0-1_screenshot.jpeg' %}" alt="Nice-Try" style="width:600px">
+    <p style="color:black;text-align: left">
+    Just gotta get out, just gotta get right outta here
+    Nothing really matters, Anyone can see,
+    Nothing really matters,
+    Nothing really matters to me
+    Any way the wind blows...
+    </p>
+
+    <p>user: {{ user.username }}</p>
+    <p>Your Assigned Roles: {{ login_roles }}</p>
+</div>
+{% endif %}
+{% endblock content %}
+{% else %}
+{% include 'snippet/not_authorized.html' %}
+{% endif %}

@@ -1,0 +1,15 @@
+{% extends 'toa/base.html' %}
+
+{% block title %}
+    <title>Create</title>
+{% endblock title %}
+
+{% block content %}
+    <h1 style="text-align: center; padding-top: 1em; padding-bottom: 1em;">Add New TOA Information</h1>
+
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-success">
+    </form>
+{% endblock content %}

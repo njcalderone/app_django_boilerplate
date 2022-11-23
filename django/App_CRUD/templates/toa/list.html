@@ -1,0 +1,86 @@
+{% extends 'toa/base.html' %}
+
+{% load socialaccount %}
+{% load Project_Django_Boilerplate_Gap_Extras %}
+{% load static %}
+{% load i18n %}
+{% block title %}
+    <title>TOA List</title>
+{% endblock title %}
+{% if user.is_authenticated %}
+{% block content %}
+{% include 'snippet/head.html' %}
+{% include 'snippet/web_banner.html' %}
+{% include 'snippet/web_footer.html' %}
+{% if basic_access  == "TRUE" %}
+    <h1 style="text-align: center; padding-top: 1em; padding-bottom: 1em;">toas Information</h1>
+
+    <!-- Search section  -->
+    <div class="center-form" style="display: flex; justify-content: center;">
+        <form action="{% url 'toas-list' %}" method="GET" style="width: 500px;">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Search by Name, Summary, or Contact" aria-label="" aria-describedby="basic-addon1" style="margin-right: 10px;"
+              name="search_query" value="{{ search_query }}"/>
+    
+              <input class="btn btn-success" type="submit" value="Search"/>
+            </div>
+        </form>
+    </div>
+    <br>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Summary</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Latitude</th>
+                <th scope="col">Longitude</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for emp in toas %}
+                <tr>
+                    <th scope="row">
+                        <img style="height: 100px; width: auto;" src="{{ emp.imageURL }}" class="card-img-top" alt="...">
+                    </th>
+                    <th scope="row">{{ emp.toa_name }}</th>
+                    <td>{{ emp.toa_summary }}</td>
+                    <td>{{ emp.toa_contact }}</td>
+                    <td>{{ emp.toa_latitude }}</td>
+                    <td>{{ emp.toa_longitude }}</td>
+                    <td>
+                        <a style="margin-right: 30px;" href="{% url 'edit-toa' emp.id %}">Edit</a>
+                        <a href="{% url 'delete-toa' emp.id %}">Remove</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="text-center">
+        <a href="{% url 'create-toa' %}"><button type="button" class="btn btn-primary">Add New Info</button></a>
+    </div>
+
+{% else %}
+<div style="position:absolute;top:12%;bottom:12%;left:12%;background-color: white">
+<h1 style="color:black;text-align: center;font-size: 110%">"You don't have the proper access to see this page"</h1>
+    <img style='display: block;margin-left: auto;margin-right: auto;width: 50%' src="{% static 'img/You_Shall_Not_Pass!_0-1_screenshot.jpeg' %}" alt="Nice-Try" style="width:600px">
+    <p style="color:black;text-align: left">
+    Just gotta get out, just gotta get right outta here
+    Nothing really matters, Anyone can see,
+    Nothing really matters,
+    Nothing really matters to me
+    Any way the wind blows...
+    </p>
+
+    <p>user: {{ user.username }}</p>
+    <p>Your Assigned Roles: {{ login_roles }}</p>
+</div>
+{% endif %}
+{% endblock content %}
+{% else %}
+{% include 'snippet/not_authorized.html' %}
+{% endif %}
