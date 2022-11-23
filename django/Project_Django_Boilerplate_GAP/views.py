@@ -91,6 +91,6 @@ def profile(request, *args, **kwargs):
         access = "FALSE"
     usernames = {
         'login_roles': roles,
-        'basic_access': access,
+        'access': access,
     }
     return render(request, 'profile.html', usernames)

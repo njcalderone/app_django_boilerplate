@@ -19,6 +19,7 @@ def toas_list(request):
         Q(toa_summary__icontains=search_query)
     )
     roles = get_user_roles(request)
+    
     if "Basic_User" in roles:
        access = "TRUE"
     else:
@@ -27,7 +28,7 @@ def toas_list(request):
         'toas': toas,
         'search_query': search_query,
         'login_roles': roles,
-        'basic_access': access,
+        'access': access,
     }
     return render(request, 'toa/list.html', context)
 
@@ -40,9 +41,15 @@ def create_toa(request):
         if form.is_valid():
             form.save()
             return redirect('toas-list')
-
+    roles = get_user_roles(request)
+    if "Data_Edit" in roles:
+       access = "TRUE"
+    else:
+        access = "FALSE"
     context = {
         'form': form,
+        'login_roles': roles,
+        'access': access,
     }
     return render(request, 'toa/create.html', context)
 
@@ -56,10 +63,16 @@ def edit_toa(request, pk):
         if form.is_valid():
             form.save()
             return redirect('toas-list')
-
+    roles = get_user_roles(request)
+    if "Data_Edit" in roles:
+       access = "TRUE"
+    else:
+        access = "FALSE"
     context = {
         'toa': toa,
         'form': form,
+        'login_roles': roles,
+        'access': access,
     }
     return render(request, 'toa/edit.html', context)
 
@@ -70,8 +83,14 @@ def delete_toa(request, pk):
     if request.method == 'POST':
         toa.delete()
         return redirect('toas-list')
-
+    roles = get_user_roles(request)
+    if "Data_Edit" in roles:
+       access = "TRUE"
+    else:
+        access = "FALSE"
     context = {
         'toa': toa,
+        'login_roles': roles,
+        'access': access,
     }
     return render(request, 'toa/delete.html', context)

@@ -1,15 +1,22 @@
 {% extends 'toa/base.html' %}
+{% if user.is_authenticated %}
+    {% block title %}
+        <title>Create</title>
+    {% endblock title %}
 
-{% block title %}
-    <title>Create</title>
-{% endblock title %}
+    {% block content %}
+        {% if access  == "TRUE" %}
+            <h1 style="text-align: center; padding-top: 1em; padding-bottom: 1em;">Add New TOA Information</h1>
 
-{% block content %}
-    <h1 style="text-align: center; padding-top: 1em; padding-bottom: 1em;">Add New TOA Information</h1>
-
-    <form action="" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" class="btn btn-success">
-    </form>
-{% endblock content %}
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="btn btn-success">
+            </form>
+        {% else %}
+            {% include 'snippet/access_denied.html' %}
+        {% endif %}
+    {% endblock content %}
+{% else %}
+    {% include 'snippet/not_authorized.html' %}
+{% endif %}
