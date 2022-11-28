@@ -82,7 +82,11 @@ got to [Our GitLab](https://gitlab.jadeuc.com/gap/bza/app_django_boilerplate) an
 
 </details><details><summary><h2><b>Install Docker</b></h2></summary>
 
-Please see [link](https://docs.docker.com/desktop/install/mac-install/) for detailed installation instructions
+Please see [link](https://docs.docker.com/desktop/install/mac-install/) for detailed installation instructions.
+
+</details><details><summary><h2><b>Install Rancher & nerdctl </b></h2></summary>
+
+Please see [link](https://rancherdesktop.io/) for detailed installation instructions.
 
 </details><details><summary><h2><b>Set up your IDE & Project: (Using Visual Studios code)</b></h2></summary>
 
@@ -130,7 +134,7 @@ Then you can navigate to http://host.docker.internal:8000/ to view your applicat
 Next login with select login with keycloak
 Default creds for testing are:
 
-(user3 has no basic_roles to show that role based acess controls are working for basic access or view only access)
+(user3 has no Basic_Roles to show that role based acess controls are working for view only access)
 user: user1
 pass: user1 
 
@@ -138,14 +142,43 @@ pass: user1
 user: user2
 pass: user2 
 
-(user3 has no roles to show that role based acess controls are blocking content for users with no roles)
+(user3 has No_Roles to show that role based acess controls are blocking content for users with no roles)
 user: user3
 pass: user3 
 
 See modify keycloak section to add/remove users and roles. 
 See modify application to add role based acess controls to specific page/view/data
 
-</details><details><summary><b>Deploy Docker Container To Kubernetes</b></summary>
+</details><details><summary><b>Deploy Container using nerdctl</b></summary>
+
+###  Deploy Container using nerdctl
+
+use the following command to deploy your application to nerdctl: 
+`nerdctl compose up -d` (the -d flag is will make nerdctl run in the background so you can continue to ue the current terminal)
+
+Then you can navigate to http://host.docker.internal:8000/ to view your application.
+Next login with select login with keycloak
+Default creds for testing are:
+
+(user3 has no Basic_Roles to show that role based acess controls are working for view only access)
+user: user1
+pass: user1 
+
+(user3 has Data_Edit permision to show that role based acess controls are allowing this user and no other user the ability to edit data)
+user: user2
+pass: user2 
+
+(user3 has No_Roles to show that role based acess controls are blocking content for users with no roles)
+user: user3
+pass: user3 
+
+See modify keycloak section to add/remove users and roles. 
+See modify application to add role based acess controls to specific page/view/data
+
+
+</details>
+
+<details><summary><b>Deploy Docker Container To Kubernetes</b></summary>
 
 ###  Deploy Docker Container To Kubernetes
 
@@ -231,5 +264,19 @@ Exit `Control C`
 `docker cp `first3ofcontanerid`:/tmp/keycloak-gbp-export.json ~/Desktop`
 
 then copy the keycloak-gbp-export.json located on your desktop and replace the default_realm.json in project (ie ./keyclaok/default_realm.json) "make sure you rename the file to default_realm.json) (ie ./keyclaok/default_realm.json"
+
+</details>
+
+</details><details><summary><h2><b>Application Deployent Pipeline</b></h2></summary>
+
+<details><summary><b>CI</b></summary>
+
+
+</details>
+
+<details><summary><b>CD</b></summary>
+
+
+</details>
 
 </details>

@@ -19,7 +19,7 @@ django-sslserver = "^0.22"
 psycopg2-binary = "^2.9.3"
 gunicorn = "^20.1.0"
 whitenoise = "^6.2.0"
-pillow = "9.0.1"
+pillow = "^9.3.0"
 debugpy = "^1.6.3"
 
 
