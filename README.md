@@ -1,26 +1,22 @@
 # GAP Django Boilerplate template
 ![Alt text](./.readmefiles/app_home.png)
 
-<details><summary><b>Application Overview</b></summary>
+<details><summary><h2><b>Application Overview</b></h2></summary>
 
-## **Application Overview**
 ### Boilerplate for smaller projects(Scaffolding)
 This boilerplates is a  “Starter Kit” . That targets novice developers or new early adopters. 
 
 It focuses on fast prototyping by creating the elements which are necessary for a baseline Django Application. The intent of this application is to provide a baseline for look and feel of future applications that will be put on this platform. The main task/goal of this application is to allow any level of developer the ability to start working on logic without worrying about things like Authentication, Role Based Access Controls RBAC ,Database integration, and a familiar "testable" local authentication client.  This application was suppose to target a widely used programing language that can easily be picked up . Thus it is implement Django framework which is based on Python.
 
-</details><details><summary><b>Design Requirements</b></summary>
+</details><details><summary><h2><b>Design Requirements</b></h2></summary>
 
-## **Design Requirements**
 * Django Framework
 * Database integration
 * Role Based Access Controls RBAC
 * Keycloak (All-Auth)
 * Local Development
 
-</details><details><summary><b>GitLab Set Up</b></summary>
-
-## **GitLab Set Up**
+</details><details><summary><h2><b>GitLab Set Up</b></h2></summary>
 
 <details><summary>Create GitLab SSH Keys with ssh-keygen</summary>
 
@@ -84,15 +80,11 @@ got to [Our GitLab](https://gitlab.jadeuc.com/gap/bza/app_django_boilerplate) an
 
 </details>
 
-</details><details><summary><b>Install Docker</b></summary>
+</details><details><summary><h2><b>Install Docker</b></h2></summary>
 
-##  Install Docker
 Please see [link](https://docs.docker.com/desktop/install/mac-install/) for detailed installation instructions
 
-</details><details><summary><b>Set up your IDE & Project: (Using Visual Studios code)</b></summary>
-
-##  Set up your IDE & Project: (Using Visual Studios code)
-
+</details><details><summary><h2><b>Set up your IDE & Project: (Using Visual Studios code)</b></h2></summary>
 
 <details><summary>Install and Configure Visual Studio Code</summary>
 
@@ -126,9 +118,7 @@ click enter  and select open
 
 </details>
 
-</details><details><summary><b>Deploy Application On Local System</b></summary>
-
-##  Deploy Application On Local System
+</details><details><summary><h2><b>Deploy Application On Local System</b></h2></summary>
 
 <details><summary><b>Deploy Application in Docker</b></summary>
 
@@ -163,13 +153,9 @@ See modify application to add role based acess controls to specific page/view/da
 </details>
 
 </details>
-<details><summary><b>Modify and Tweak Application</b></summary>
+<details><summary><h2><b>Modify and Tweak Application</b></h2></summary>
 
-## Modify and Tweak Application
-
-</details><details><summary><b>Modify and Tweak Keycloak</b></summary>
-
-## Modify and Tweak Keycloak
+</details><details><summary><h2><b>Modify and Tweak Keycloak</b></h2></summary>
 
 <details><summary>Pre-Requistes</summary>
 
