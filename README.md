@@ -201,6 +201,7 @@ Complete the addition by `python manage.py makemigrations` (this will migrate th
 
 </details>
 
+
 <details><summary>CRUD Remove Field</summary>
 
 Go to django>App_CRUD>forms.py and remove field from the fields variable.
@@ -249,6 +250,15 @@ then add the following to your {% block content %} on your new html template: (T
  In order to add static files IE js, css, images make sure to include a static folder with the following hieracy to your app.  Then add `{% load static %}` to the top of the html template your trying to load the static file into. Then use something similar to src="{% static 'img/You_Shall_Not_Pass!_0-1_screenshot.jpeg' %}" to load the specific static item into the page.
 </details>
 
+<details><summary>Modify Global Variables</summary>
+Global variables you might want to import include as keys, secrets, and  static variables that get reused often IE web domain.
+Go to the django>Dockerfile  and add:
+(ENV)    (variable_name) (variable value)
+IE:
+`ENV KEYCLOAK_ADMIN_PASSWORD admin`
+
+
+</details>
 
 
 
