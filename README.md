@@ -185,8 +185,72 @@ See modify application to add role based acess controls to specific page/view/da
 
 </details>
 
+</details><details><summary><h2><b>Modify and Tweak Application</b></h2></summary>
+
+<details><summary>CRUD Add Fields</summary>
+
+Go to django>App_CRUD>forms.py and add addittional field to the fields variable.
+
+Then copy and past one of the widget lines and modify the name and placeholder as needed.
+
+
+Then go to django>App_CRUD>models.py and add addittional model to the class TOA.
+
+
+Complete the addition by `python manage.py makemigrations` (this will migrate the fields to the sqlite database)
+
 </details>
-<details><summary><h2><b>Modify and Tweak Application</b></h2></summary>
+
+<details><summary>CRUD Remove Field</summary>
+
+Go to django>App_CRUD>forms.py and remove field from the fields variable.
+
+Then remove one of the widget lines.
+
+
+Then go to django>App_CRUD>models.py and remove the field model from the class TOA.
+
+Then go to Database plugin and add the sqlite3 file as the database you are editing
+
+Then remove the table  or rename it so you can pull migrate old data over to the new table 
+
+</details>
+
+<details><summary>Add/Change Role based Access Controls To Pages & Snipits</summary>
+go to django>App_CRUD>views_CRUD.py Or your app views
+
+Make sure the import statment of `from Project_Django_Boilerplate_GAP.views import get_user_roles` is found at the top ofyour views.py.
+
+Then add the following to your view definitition: (A view definition defines each new view or webpage the user has access to. You should have a new one for ever html page you present to the user)
+```
+    roles = get_user_roles(request)
+    
+    if "Basic_User" in roles:
+       access = "TRUE"
+    else:
+        access = "FALSE"
+    context = {
+        'login_roles': roles,
+        'access': access,
+```
+Change "Basic_User" to the role that you created for this page in keycloak. (Be sure to use the exact spelling and capitalization input into keycloak)
+
+then add the following to your {% block content %} on your new html template: (This will import context from the statment you created above in your view.py)
+```
+        {% if access  == "TRUE" %}
+            Your HTML
+        {% else %}
+            {% include 'snippet/access_denied.html' %}
+```
+ Snipits are blocks of repeatable HTML that you intend to use in multiple pages ie Headers, Footers, Navigation (This is the main way to keep the look and feel the same outside of .CSS)
+ Add your custom snippits under Project_Django_Boilerplate_GAP>templates>snippet"
+ Snippits can be added to a page by adding `{% include 'snippet/yoursnippitname.html' %}` to the loaction you want your snipit to load.
+ 
+ In order to add static files IE js, css, images make sure to include a static folder with the following hieracy to your app.  Then add `{% load static %}` to the top of the html template your trying to load the static file into. Then use something similar to src="{% static 'img/You_Shall_Not_Pass!_0-1_screenshot.jpeg' %}" to load the specific static item into the page.
+</details>
+
+
+
 
 </details><details><summary><h2><b>Modify and Tweak Keycloak</b></h2></summary>
 
