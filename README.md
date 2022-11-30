@@ -6,7 +6,7 @@
 ### Boilerplate for smaller projects(Scaffolding)
 This boilerplates is a  “Starter Kit” . That targets novice developers or new early adopters. 
 
-It focuses on fast prototyping by creating the elements which are necessary for a baseline Django Application. The intent of this application is to provide a baseline for look and feel of future applications that will be put on this platform. The main task/goal of this application is to allow any level of developer the ability to start working on logic without worrying about things like Authentication, Role Based Access Controls RBAC ,Database integration, and a familiar "testable" local authentication client.  This application was suppose to target a widely used programing language that can easily be picked up . Thus it is implement Django framework which is based on Python.
+It focuses on fast prototyping by creating the elements which are necessary for a baseline Django Application. The intent of this application is to provide a baseline for look and feel of future applications that will be put on this platform. The main task/goal of this application is to allow any level of developer the ability to start working on logic without worrying about things like Authentication, Role Based Access Controls RBAC ,Database integration, and building a test harness.  This application was suppose to target a widely used programing language that can easily be picked up. Thus it is implemented using Django framework which is based on Python.
 
 </details><details><summary><h2><b>Design Requirements</b></h2></summary>
 
@@ -190,31 +190,30 @@ See modify application to add role based acess controls to specific page/view/da
 <details><summary>CRUD Add Fields</summary>
 
 Go to django>App_CRUD>forms.py and add addittional field to the fields variable.
-
+![Alt text](./.readmefiles/crud0.png)
 Then copy and past one of the widget lines and modify the name and placeholder as needed.
-
-
+![Alt text](./.readmefiles/crud1.png)
 Then go to django>App_CRUD>models.py and add addittional model to the class TOA.
-
-
-Complete the addition by `python manage.py makemigrations` (this will migrate the fields to the sqlite database)
-
+![Alt text](./.readmefiles/crud2.png)
+Complete the addition by running  `python manage.py makemigrations` in terminal (this will migrate the fields to the sqlite database)
+![Alt text](./.readmefiles/crud3.png)
 </details>
 
 
 <details><summary>CRUD Remove Field</summary>
 
 Go to django>App_CRUD>forms.py and remove field from the fields variable.
-
+![Alt text](./.readmefiles/crud0.png)
 Then remove one of the widget lines.
-
-
+![Alt text](./.readmefiles/crud1.png)
 Then go to django>App_CRUD>models.py and remove the field model from the class TOA.
-
+![Alt text](./.readmefiles/crud2.png)
 Then go to Database plugin and add the sqlite3 file as the database you are editing
-
+![Alt text](./.readmefiles/sql0.png)
 Then remove the table  or rename it so you can pull migrate old data over to the new table 
-
+![Alt text](./.readmefiles/sql1.png)
+Complete the addition by running  `python manage.py makemigrations` in terminal (this will migrate the fields to the sqlite database)
+![Alt text](./.readmefiles/crud3.png)
 </details>
 
 <details><summary>Add/Change Role based Access Controls To Pages & Snipits</summary>
@@ -235,6 +234,8 @@ Then add the following to your view definitition: (A view definition defines eac
         'access': access,
 ```
 Change "Basic_User" to the role that you created for this page in keycloak. (Be sure to use the exact spelling and capitalization input into keycloak)
+![Alt text](./.readmefiles/crud4.png)
+
 
 then add the following to your {% block content %} on your new html template: (This will import context from the statment you created above in your view.py)
 ```
@@ -243,11 +244,15 @@ then add the following to your {% block content %} on your new html template: (T
         {% else %}
             {% include 'snippet/access_denied.html' %}
 ```
+![Alt text](./.readmefiles/template4.png)
+
  Snipits are blocks of repeatable HTML that you intend to use in multiple pages ie Headers, Footers, Navigation (This is the main way to keep the look and feel the same outside of .CSS)
  Add your custom snippits under Project_Django_Boilerplate_GAP>templates>snippet"
  Snippits can be added to a page by adding `{% include 'snippet/yoursnippitname.html' %}` to the loaction you want your snipit to load.
- 
+ ![Alt text](./.readmefiles/snippet0.png)
+
  In order to add static files IE js, css, images make sure to include a static folder with the following hieracy to your app.  Then add `{% load static %}` to the top of the html template your trying to load the static file into. Then use something similar to src="{% static 'img/You_Shall_Not_Pass!_0-1_screenshot.jpeg' %}" to load the specific static item into the page.
+ ![Alt text](./.readmefiles/snippet1.png)
 </details>
 
 <details><summary>Modify Global Variables</summary>
@@ -257,6 +262,7 @@ Go to the django>Dockerfile  and add:
 IE:
 `ENV KEYCLOAK_ADMIN_PASSWORD admin`
 
+ ![Alt text](./.readmefiles/env0.png)
 
 </details>
 
