@@ -244,7 +244,7 @@ then add the following to your {% block content %} on your new html template: (T
         {% else %}
             {% include 'snippet/access_denied.html' %}
 ```
-![Alt text](./.readmefiles/template4.png)
+![Alt text](./.readmefiles/template0.png)
 
  Snipits are blocks of repeatable HTML that you intend to use in multiple pages ie Headers, Footers, Navigation (This is the main way to keep the look and feel the same outside of .CSS)
  Add your custom snippets under Project_Django_Boilerplate_GAP>templates>snippet"
@@ -290,7 +290,9 @@ Click users on the left hand panel:
 Click Add user in right hand corner:
 ![Alt text](./.readmefiles/adduser1.png)
 Fill in the Form with user:
+
 ![Alt text](./.readmefiles/adduser2.png)
+
 Add a password by going to the credential tab:
 ![Alt text](./.readmefiles/adduser3.png)
 Remove user by selecting Delete:
@@ -341,7 +343,7 @@ then use the below commands:
 ```
 Exit `Control C`
 
-`docker cp `first3ofcontanerid`:/tmp/keycloak-gbp-export.json ~/Desktop`
+`docker cp first_3_of_contaner_id:/tmp/keycloak-gbp-export.json ~/Desktop` Replace first_3_of_contaner_id with the first 3 characters of your target container id
 
 then copy the keycloak-gbp-export.json located on your desktop and replace the default_realm.json in project (ie ./keyclaok/default_realm.json) "make sure you rename the file to default_realm.json) (ie ./keyclaok/default_realm.json"
 
