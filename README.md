@@ -216,7 +216,7 @@ Complete the addition by running  `python manage.py makemigrations` in terminal 
 ![Alt text](./.readmefiles/crud3.png)
 </details>
 
-<details><summary>Add/Change Role based Access Controls To Pages & Snipits</summary>
+<details><summary>Add/Change Role based Access Controls To Pages & Snippets</summary>
 go to django>App_CRUD>views_CRUD.py Or your app views
 
 Make sure the import statment of `from Project_Django_Boilerplate_GAP.views import get_user_roles` is found at the top ofyour views.py.
@@ -247,8 +247,8 @@ then add the following to your {% block content %} on your new html template: (T
 ![Alt text](./.readmefiles/template4.png)
 
  Snipits are blocks of repeatable HTML that you intend to use in multiple pages ie Headers, Footers, Navigation (This is the main way to keep the look and feel the same outside of .CSS)
- Add your custom snippits under Project_Django_Boilerplate_GAP>templates>snippet"
- Snippits can be added to a page by adding `{% include 'snippet/yoursnippitname.html' %}` to the loaction you want your snipit to load.
+ Add your custom snippets under Project_Django_Boilerplate_GAP>templates>snippet"
+ Snippits can be added to a page by adding `{% include 'snippet/yoursnippetname.html' %}` to the loaction you want your snipit to load.
  ![Alt text](./.readmefiles/snippet0.png)
 
  In order to add static files IE js, css, images make sure to include a static folder with the following hieracy to your app.  Then add `{% load static %}` to the top of the html template your trying to load the static file into. Then use something similar to src="{% static 'img/You_Shall_Not_Pass!_0-1_screenshot.jpeg' %}" to load the specific static item into the page.
