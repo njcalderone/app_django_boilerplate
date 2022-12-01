@@ -19,7 +19,7 @@ ADD . /Django_app
 EXPOSE 8000
 EXPOSE 5678
 COPY ./pyproject.toml /Django_app/pyproject.toml
-RUN poetry config virtualenvs.create false && poetry install --no-dev --no-interaction --no-ansi --no-root
+RUN poetry config virtualenvs.create false && poetry install --only main --no-interaction --no-ansi --no-root
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
 #RUN adduser -u 5678 --disabled-password --gecos "" appuser && \

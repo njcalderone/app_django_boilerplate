@@ -5,7 +5,6 @@ description = ""
 authors = ["njcalderone <112025653+njcalderone@users.noreply.github.com>"]
 readme = "README.md"
 packages = [{include = "Project_Django_Boilerplate_Gap"}]
-
 [tool.poetry.dependencies]
 python = "^3.10"
 Django = "^4.1.1"
