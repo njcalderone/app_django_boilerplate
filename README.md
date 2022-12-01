@@ -3,7 +3,7 @@
 
 <details><summary><h2><b>Application Overview</b></h2></summary>
 
-### Boilerplate for smaller projects(Scaffolding)
+### Boilerplate for smaller projects (Scaffolding)
 This boilerplates is a  “Starter Kit” . That targets novice developers or new early adopters. 
 
 It focuses on fast prototyping by creating the elements which are necessary for a baseline Django Application. The intent of this application is to provide a baseline for look and feel of future applications that will be put on this platform. The main task/goal of this application is to allow any level of developer the ability to start working on logic without worrying about things like Authentication, Role Based Access Controls RBAC ,Database integration, and building a test harness.  This application was suppose to target a widely used programing language that can easily be picked up. Thus it is implemented using Django framework which is based on Python.
