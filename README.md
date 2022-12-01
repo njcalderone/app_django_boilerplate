@@ -286,7 +286,7 @@ Change "Basic_User" to the role that you created for this page in keycloak. (Be 
 ![Alt text](./.readmefiles/crud4.png)
 
 
-then add the following to your {% block content %} on your new html template: (This will import context from the statment you created above in your view.py)
+Then add the following to your {% block content %} on your new html template: (This will import context from the statment you created above in your view.py)
 ```
         {% if access  == "TRUE" %}
             Your HTML
@@ -370,7 +370,7 @@ click on the config>Roles option in your side bar then Click add role:
 
 ![Alt text](./.readmefiles/role0.png)
 
-then fill in form and click save:
+Then fill in form and click save:
 
 ![Alt text](./.readmefiles/role1.png)
 
@@ -379,7 +379,7 @@ then fill in form and click save:
 <details><summary>Add Roles To User</summary>
 
 ###  Add Roles To User
-click edit users under the manage>Users Sidebar selection then click view users:
+Click edit users under the manage>Users Sidebar selection then click view users:
 
 ![Alt text](./.readmefiles/userrole.png)
 
@@ -387,7 +387,7 @@ Select edit user and then select edit ad click on role mapping tab:
 
 ![Alt text](./.readmefiles/userrole1.png)
 
-then select the role in available roles and "add selected"
+Then select the role in available roles and "add selected"
 
 </details>
 
@@ -395,9 +395,9 @@ then select the role in available roles and "add selected"
 
 ###  Save Running Keycloak Config
 
-"do not use the import export feature in the keycloak gui" (It doesn't work for your purposes)
+"Do not use the import export feature in the keycloak gui" (It doesn't work for your purposes)
 
-"use the below commands modify the <tags> with your specific info"
+"Use the below commands modify the <tags> with your specific info"
 
 Use "docker ps" command to display containers and there ids
 then use the below commands:
@@ -415,7 +415,7 @@ Exit `Control C`
 
 `docker cp first_3_of_contaner_id:/tmp/keycloak-gbp-export.json ~/Desktop` Replace first_3_of_contaner_id with the first 3 characters of your target container id
 
-then copy the keycloak-gbp-export.json located on your desktop and replace the default_realm.json in project (ie ./keyclaok/default_realm.json) "make sure you rename the file to default_realm.json) (ie ./keyclaok/default_realm.json"
+Then copy the keycloak-gbp-export.json located on your desktop and replace the default_realm.json in project (ie ./keyclaok/default_realm.json) "make sure you rename the file to default_realm.json) (ie ./keyclaok/default_realm.json"
 
 </details>
 
