@@ -98,9 +98,9 @@ Install [link](https://code.visualstudio.com/) (download and install the proper 
 
 Recommend Installing all of the following extension 
 
-(required Python, Pylace, YAML and Database Client) 
+(Required: Python, Pylace, YAML and Database Client) 
 
-(highly recommend code auto complete and Django Libraries)
+(Highly recommend: code auto complete and Django Libraries)
 
 (The remaining plug-ins in the image below are good to have but not required or highly recomended)
 
