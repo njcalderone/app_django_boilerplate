@@ -95,7 +95,11 @@ Please see [link](https://rancherdesktop.io/) for detailed installation instruct
 ### Install and Configure Visual Studio Code
  
 Install [link](https://code.visualstudio.com/) (download and install the proper version for your OS)
-Recommend Installing all of the following extension (required Python, Pylace, YAML and Database Client) ( highly recommend code auto complete and Django Libraries)
+
+Recommend Installing all of the following extension 
+(required Python, Pylace, YAML and Database Client) 
+(highly recommend code auto complete and Django Libraries)
+(The remaining plug-ins in the image below are good to have but not required or highly recomended)
 ![Alt text](./.readmefiles/extentions0.png)
 ![Alt text](./.readmefiles/extentions1.png)
 
