@@ -1,4 +1,5 @@
 # GAP Django Boilerplate template
+
 ![Alt text](./.readmefiles/app_home.png)
 
 <details><summary><h2><b>Application Overview</b></h2></summary>
@@ -35,6 +36,7 @@ This operation will create Git SSH keys named id_ras.pub and id_rsa respectively
 
 ### Copy the public SSH key
 You must configure the value of the public key in GitLab. Open the public key in a text editor and copy the value to the clipboard:
+
 ![Alt text](./.readmefiles/github-ssh-keygen-key-pub.jpeg)
 
 Copy the .pub key produced from the GitLab SSH key generation operation and configure it into GitLab.
@@ -45,6 +47,7 @@ Log into GitLab and click on your account preferences.
 Click the SSH Keys link and paste the copied value into the text field.
 
 Set an expiration date, and then click the blue button to persistently add the GitLab SSH key.
+
 ![Alt text](./.readmefiles/gitlab-ssh-key-conf-1024x471.jpeg)
 Configure GitLab SSH keys under your account preferences.
 
@@ -54,9 +57,11 @@ Configure GitLab SSH keys under your account preferences.
 Continue under preferences and select access tokens on the left hand side
 
  I would name the token based on the IDE you are using. Also notice that you can chose an expiration date for the token. I would also give the token full permissions as shown below. Then I would click generate personal access token.
+
 ![Alt text](./.readmefiles/access-token1.png)
 
 Next copy and save that token temporarily to a local .txt . You will need it later
+
 ![Alt text](./.readmefiles/access-token2.png)
 
 </details><details><summary>Create your Gitlab project</summary>
@@ -64,14 +69,23 @@ Next copy and save that token temporarily to a local .txt . You will need it lat
 ### Create your Gitlab project
 
 Go to [Our GitLab](https://gitlab.jadeuc.com/gap/bza/) and click new sub group.
+
 ![Alt text](./.readmefiles/subgroup.png)
+
 Recommend naming it with the following convention `<"your project name">`.I would leave the project private until your ready to share it with the rest of the Gitlab teams. Then Click create sub group
+
 ![Alt text](./.readmefiles/subgroup2.png)
+
 Then fork the branch 
+
 ![Alt text](./.readmefiles/creatpr0.png.png)
+
 Click create blank project. Recommend naming it using  the following convention `<app_"your project name">`
+
 ![Alt text](./.readmefiles/creatpr1.png)
+
 ![Alt text](./.readmefiles/creatpr2.png)
+
 Now you need to fork the app_django_boilerplate into the subgroup you created above
 
 got to [Our GitLab](https://gitlab.jadeuc.com/gap/bza/app_django_boilerplate) and click fork
@@ -105,6 +119,7 @@ Recommend Installing all of the following extension
 (The remaining plug-ins in the image below are good to have but not required or highly recomended)
 
 ![Alt text](./.readmefiles/extentions0.png)
+
 ![Alt text](./.readmefiles/extentions1.png)
 
 </details>
@@ -115,12 +130,19 @@ Recommend Installing all of the following extension
  
 Clone your `keycloak_<your_app_name>`  from the fork you created earlier
 copy the git link for your `keycloak_<your_app_name>`
+
 ![Alt text](./.readmefiles/clone.png)
-then open VS Code and click "clone git repository"
+
+Then open VS Code and click "clone git repository"
+
 ![Alt text](./.readmefiles/clone1.png)
-then paste the git link into the clone from url bar and click enter
+
+Then paste the git link into the clone from url bar and click enter
+
 ![Alt text](./.readmefiles/clone2.png)
-next create and select a parent folder for all of your applications. I created a folder called  "Visual_Studio_Code_Projects" in my home directory. Make sure you select this folder as the location you want to clone your keycloak application to
+
+Next create and select a parent folder for all of your applications. I created a folder called  "Visual_Studio_Code_Projects" in my home directory. Make sure you select this folder as the location you want to clone your keycloak application to.
+
 ![Alt text](./.readmefiles/clone3.png)
 click enter  and select open
 </details>
@@ -197,29 +219,48 @@ See modify application to add role based acess controls to specific page/view/da
 <details><summary>CRUD Add Fields</summary>
 
 Go to django>App_CRUD>forms.py and add addittional field to the fields variable.
+
 ![Alt text](./.readmefiles/crud0.png)
+
 Then copy and past one of the widget lines and modify the name and placeholder as needed.
+
 ![Alt text](./.readmefiles/crud1.png)
+
 Then go to django>App_CRUD>models.py and add addittional model to the class TOA.
+
 ![Alt text](./.readmefiles/crud2.png)
+
 Complete the addition by running  `python manage.py makemigrations` in terminal (this will migrate the fields to the sqlite database)
+
 ![Alt text](./.readmefiles/crud3.png)
+
 </details>
 
 
 <details><summary>CRUD Remove Field</summary>
 
 Go to django>App_CRUD>forms.py and remove field from the fields variable.
+
 ![Alt text](./.readmefiles/crud0.png)
+
 Then remove one of the widget lines.
+
 ![Alt text](./.readmefiles/crud1.png)
+
 Then go to django>App_CRUD>models.py and remove the field model from the class TOA.
+
 ![Alt text](./.readmefiles/crud2.png)
+
 Then go to Database plugin and add the sqlite3 file as the database you are editing
+
 ![Alt text](./.readmefiles/sql0.png)
+
 Then remove the table  or rename it so you can pull migrate old data over to the new table 
+
 ![Alt text](./.readmefiles/sql1.png)
+
 Complete the addition by running  `python manage.py makemigrations` in terminal (this will migrate the fields to the sqlite database)
+
 ![Alt text](./.readmefiles/crud3.png)
 </details>
 
@@ -241,6 +282,7 @@ Then add the following to your view definitition: (A view definition defines eac
         'access': access,
 ```
 Change "Basic_User" to the role that you created for this page in keycloak. (Be sure to use the exact spelling and capitalization input into keycloak)
+
 ![Alt text](./.readmefiles/crud4.png)
 
 
@@ -256,9 +298,11 @@ then add the following to your {% block content %} on your new html template: (T
  Snipits are blocks of repeatable HTML that you intend to use in multiple pages ie Headers, Footers, Navigation (This is the main way to keep the look and feel the same outside of .CSS)
  Add your custom snippets under Project_Django_Boilerplate_GAP>templates>snippet"
  Snippits can be added to a page by adding `{% include 'snippet/yoursnippetname.html' %}` to the loaction you want your snipit to load.
+
  ![Alt text](./.readmefiles/snippet0.png)
 
  In order to add static files IE js, css, images make sure to include a static folder with the following hieracy to your app.  Then add `{% load static %}` to the top of the html template your trying to load the static file into. Then use something similar to src="{% static 'img/You_Shall_Not_Pass!_0-1_screenshot.jpeg' %}" to load the specific static item into the page.
+
  ![Alt text](./.readmefiles/snippet1.png)
 </details>
 
@@ -281,10 +325,15 @@ IE:
 
 ###  Pre-Requistes
 Pre-req Log into Keycloak using http://127.0.0.1:8080/auth/ 
+
 ![Alt text](./.readmefiles/keycloak0.png)
+
 Click Administration Console "add default user: admin  and pass: admin" Click sign in
+
 ![Alt text](./.readmefiles/keycloak1.png)
+
 Make sure you are in the Default Realm
+
 ![Alt text](./.readmefiles/keycloak2.png)
 
 </details>
@@ -293,16 +342,23 @@ Make sure you are in the Default Realm
 
 ###  Add Users
 Click users on the left hand panel:
+
 ![Alt text](./.readmefiles/adduser0.png)
+
 Click Add user in right hand corner:
+
 ![Alt text](./.readmefiles/adduser1.png)
+
 Fill in the Form with user:
 
 ![Alt text](./.readmefiles/adduser2.png)
 
 Add a password by going to the credential tab:
+
 ![Alt text](./.readmefiles/adduser3.png)
+
 Remove user by selecting Delete:
+
 ![Alt text](./.readmefiles/adduser4.png)
 
 </details>
@@ -311,8 +367,11 @@ Remove user by selecting Delete:
 
 ###  Add Roles
 click on the config>Roles option in your side bar then Click add role:
+
 ![Alt text](./.readmefiles/role0.png)
+
 then fill in form and click save:
+
 ![Alt text](./.readmefiles/role1.png)
 
 </details>
@@ -321,9 +380,13 @@ then fill in form and click save:
 
 ###  Add Roles To User
 click edit users under the manage>Users Sidebar selection then click view users:
+
 ![Alt text](./.readmefiles/userrole.png)
+
 Select edit user and then select edit ad click on role mapping tab:
+
 ![Alt text](./.readmefiles/userrole1.png)
+
 then select the role in available roles and "add selected"
 
 </details>
