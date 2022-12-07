@@ -7,8 +7,12 @@ ENV DJANGO_ADMIN_EMAIL admin@info.com
 ENV DJANGO_ADMIN_PASS admin
 ENV KEYCLOAK_CLIENT_ID DjangoApp
 ENV KEYCLOAK_CLIENT_SECRET 4ph4iZ83f4YpBALCNFkndL9UbiPEVGcf
-ENV SITE_BASE_URL http://host.docker.internal:8000/
-ENV KEYCLOAK_URL http://host.docker.internal:8080/
+#=====Works for Docker and nerdctl==============
+#ENV SITE_BASE_URL http://host.docker.internal:8000/
+#ENV KEYCLOAK_URL http://host.docker.internal:8080/
+#=====Works for kubernetes k8s ==============
+ENV SITE_BASE_URL http://django-app.rancher.localhost/
+ENV KEYCLOAK_URL http://kc.rancher.localhost/
 ENV REALM_NAME default
 ENV KEYCLOAK_ADMIN_CLIENT_ID admin-cli
 ENV KEYCLOAK_ADMIN_USERNAME admin

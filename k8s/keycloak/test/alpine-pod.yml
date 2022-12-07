@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine-test-pod
+spec:
+  containers:
+    - name: test-container
+      image: nginx:alpine
+      # command: [ "/bin/sh", "-c", "ls /etc/config/" ]
+      # command: [ "/bin/sh" ]
+      volumeMounts:
+      - name: config-volume
+        # mountPath: /etc/config
+        mountPath: /etc/config/default_realm.json
+        subPath: default_realm.json
+  volumes:
+    - name: config-volume
+      configMap:
+        # Provide the name of the ConfigMap containing the files you want
+        # to add to the container
+        name: kc-init-json
+  restartPolicy: Never

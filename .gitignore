@@ -58,8 +58,10 @@ cover/
 # Django stuff:
 *.log
 local_settings.py
-db.sqlite3
-db.sqlite3-journal
+#Add db ignore after you get to a good state
+
+#db.sqlite3
+#db.sqlite3-journal
 
 # Flask stuff:
 instance/

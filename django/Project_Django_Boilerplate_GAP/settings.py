@@ -64,7 +64,8 @@ KEYCLOAK_OIDC_PROFILE_MODEL = 'django_keycloak.OpenIdConnectProfile'
 KEYCLOAK_PERMISSIONS_METHOD = 'role'
 SOCIALACCOUNT_PROVIDERS = {
     'keycloak': {
-        'KEYCLOAK_URL': 'http://host.docker.internal:8080/auth',
+        #'KEYCLOAK_URL': 'http://host.docker.internal:8080/auth',
+        'KEYCLOAK_URL': 'http://kc.rancher.localhost/auth',
         'KEYCLOAK_REALM': 'default'
     }
 }

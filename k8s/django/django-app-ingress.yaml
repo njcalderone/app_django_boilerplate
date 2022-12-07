@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: django-app
+  labels:
+    name: django-app
+spec:
+  rules:
+  - host: django-app.rancher.localhost
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: django-app-service
+            port:
+              number: 8000
+  tls:
+  - hosts:
+    - django-app.rancher.localhost

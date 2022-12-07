@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kc-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: boilerplate
+      tier: kc-deployment
+  template:
+    metadata:
+      labels:
+        app: boilerplate
+        tier: kc-deployment
+    spec:
+      containers:
+        - args:
+            - -b 0.0.0.0
+            - -Dkeycloak.migration.action=import 
+            - -Dkeycloak.migration.provider=singleFile
+            - -Dkeycloak.migration.file=/opt/jboss/keycloak/default_realm.json
+            - -Dkeycloak.migration.strategy=OVERWRITE_EXISTING
+          env:
+            - name: DB_VENDOR
+              value: h2
+            - name: KEYCLOAK_LOGLEVEL
+              value: DEBUG
+            - name: KEYCLOAK_PASSWORD
+              value: admin
+            - name: KEYCLOAK_USER
+              value: admin
+          image: jboss/keycloak:16.1.1
+          name: keycloak
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: 1000m
+              memory: 100Mi
+          volumeMounts:
+          - name: kc-init-json-volume
+            mountPath: /opt/jboss/keycloak/default_realm.json
+            subPath: default_realm.json
+      restartPolicy: Always
+      volumes:
+        - name: kc-init-json-volume
+          configMap:
+            name: kc-init-json

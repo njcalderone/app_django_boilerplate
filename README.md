@@ -432,3 +432,42 @@ Then copy the keycloak-gbp-export.json located on your desktop and replace the d
 </details>
 
 </details>
+
+cd /django 
+nerdctl -n k8s.io build . -t registry.jcce.cloud/django-app:v1.0 
+
+
+kubectl apply -f k8s/django
+
+kubectl create namespace kc
+ kubectl -n kube-system edit configmaps coredns
+
+    ### in the editor ###
+
+    apiVersion: v1
+    data:
+      Corefile: |
+      ...
+            ready
+            `rewrite name django-app.rancher.localhost django-app-service.default.svc.cluster.local`
+            `rewrite name kc.rancher.localhost kc-service.kc.svc.cluster.local`
+            kubernetes cluster.local in-addr.arpa ip6.arpa {
+    ....
+
+        import /etc/coredns/custom/*.server
+      NodeHosts: |
+        10.1.10.148 lima-rancher-desktop
+    ```
+
+    Logs after adding entry to the coredns configmap
+    ```
+    $ kubectl logs oa2p-local-oauth2-proxy-7c76d787ff-45l6k
+    [2022/07/14 16:09:47] [options.go:81] WARNING: no explicit redirect URL: redirects will default to insecure HTTP
+    [2022/07/14 16:09:47] [provider.go:55] Performing OIDC Discovery...
+    [2022/07/14 16:09:48] [providers.go:145] Warning: Your provider supports PKCE methods ["plain" "S256"], but you have not enabled one with --code-challenge-method
+    [2022/07/14 16:09:48] [proxy.go:89] mapping path "/" => upstream "http://nginx-local:80"
+    [2022/07/14 16:09:48] [oauthproxy.go:156] OAuthProxy configured for OpenID Connect Client ID: client4
+    [2022/07/14 16:09:48] [oauthproxy.go:162] Cookie settings: name:boilerplate secure(https):false httponly:true expiry:168h0m0s domains: path:/ samesite: refresh:after 30s
+    10.42.0.1:38718 - 45234b3f-af88-4d1a-8541-5704d88bf3fd - - [2022/07/14 16:09:49] 10.42.0.24:4180 GET - "/ping" HTTP/1.1 "kube-probe/1.23" 200 2 0.000
+    ```
+kubectl -n kc apply -f k8s/keycloak
