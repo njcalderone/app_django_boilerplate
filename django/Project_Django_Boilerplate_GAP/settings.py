@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-*#(11q05tbi4j^u8f5p)tujsp82amuw#u%!#el)%prm@s2a)l+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 OIDC_OP_LOGOUT_URL_METHOD = 'Project_Django_Boilerplate_GAP.provider_logout'
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['django-app.rancher.localhost']
 
 # Application definition
 
@@ -159,3 +159,21 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'my_log_handler': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'django.log'),
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['my_log_handler'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
