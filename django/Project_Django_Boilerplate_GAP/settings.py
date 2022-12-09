@@ -80,7 +80,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://django-app.rancher.localhost/',
+    'http://django-app.rancher.localhost/'
+]
 ROOT_URLCONF = 'Project_Django_Boilerplate_GAP.urls'
 
 TEMPLATES = [
